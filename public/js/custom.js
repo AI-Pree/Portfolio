@@ -102,4 +102,3 @@ $(window).scroll(function () {
         dv.addClass("animated fadeIn");
     };
 });
-

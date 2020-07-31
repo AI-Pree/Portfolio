@@ -250,12 +250,12 @@
   </body>
   <script>
     $(".toggle-icon").click(function () {
-        $('nav').toggleClass("pushed");
-        $('#sideNav').toggleClass("pushSide")
-        $("#sideNav-content").fadeToggle("slow");
-        $("#smallNav").slideToggle(200);
-        $('body').toggleClass("stop-scroll");
-      });
+      $('nav').toggleClass("pushed")
+      $('#sideNav').toggleClass("pushSide")
+      $("#sideNav-content").fadeToggle("slow")
+      $("#smallNav").slideToggle(200)
+      $('body').toggleClass("stop-scroll")
+    });
 
       setTimeout(function () {
         $('.line').addClass("display-line");
@@ -263,7 +263,7 @@
 
       $('#animate-head').addClass("animated fadeIn");
       $('#hi').addClass("animated bounceIn");
-      
+
       let getTo = () => {
         $('nav').removeClass("pushed");
         $('#sideNav').removeClass("pushSide");
