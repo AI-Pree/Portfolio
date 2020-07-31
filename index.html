@@ -248,6 +248,95 @@
       </section>  
     </div>
   </body>
+  <script>
+    $(".toggle-icon").click(function () {
+        $('nav').toggleClass("pushed");
+        $('#sideNav').toggleClass("pushSide")
+        $("#sideNav-content").fadeToggle("slow");
+        $("#smallNav").slideToggle(200);
+        $('body').toggleClass("stop-scroll");
+      });
+
+      setTimeout(function () {
+        $('.line').addClass("display-line");
+      }, 800);
+
+      $('#animate-head').addClass("animated fadeIn");
+      $('#hi').addClass("animated bounceIn");
+      
+      let getTo = () => {
+        $('nav').removeClass("pushed");
+        $('#sideNav').removeClass("pushSide");
+        $('#sideNav-content').fadeOut();
+        $('#smallNav').slideUp(200);
+        $('body').removeClass("stop-scroll");
+      };
+
+
+      // uncomment after wards
+      // $('html, body').animate({
+      //   scrollTop:$("header").offset().top
+      // },1)
+
+      $("#develop").click(function () {
+        getTo();
+        $('html,body').animate({
+          scrollTop: $("#developer").offset().top - 30
+        }, 800);
+      });
+
+      $("#design").click(function () {
+        getTo();
+        $('html,body').animate({
+          scrollTop: $("#designer").offset().top - 30
+        }, 800);
+      });
+
+      $("#project").click(function () {
+        getTo();
+        $('html,body').animate({
+          scrollTop: $("#projects").offset().top - 30
+        }, 800);
+      });
+
+      $("#contact").click(function () {
+        getTo();
+        $('html,body').animate({
+          scrollTop: $("#contacts").offset().top - 30
+        }, 800);
+      });
+
+
+      $("#grey-box").click(function () {
+        $('html, body').animate({
+          scrollTop: $("header").offset().top
+        }, 800);
+      });
+
+      $("#red-box").click(function () {
+        $('html,body').animate({
+          scrollTop: $("#designer").offset().top - 30
+        }, 800);
+      });
+
+      $("#blue-box").click(function () {
+        $('html,body').animate({
+          scrollTop: $("#developer").offset().top - 30
+        }, 800);
+      });
+
+      $("#orange-box").click(function () {
+        $('html,body').animate({
+          scrollTop: $("#projects").offset().top - 30
+        }, 800);
+      });
+
+      $("#green-box").click(function () {
+        $('html,body').animate({
+          scrollTop: $("#contacts").offset().top - 30
+        }, 800);
+      });
+  </script>
 </html>
  
 <!-- 
