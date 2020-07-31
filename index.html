@@ -1,0 +1,482 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+
+    <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+    -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+
+    <!-- Adding custom css -->
+    <link id ="custom_css" rel="stylesheet" href="/public/css/index.css"/>
+
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <div id="root"></div>    
+    
+    <div id = "container " class = "grid">
+        <nav > 
+            <div id="nav-container">
+                  <div class="toggle-icon">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                  </div><!-- /toggle-icon -->
+            </div><!-- /nav-container -->
+            
+            <ul class ="list-icons" >
+              <li>
+                <img src = "./public/img/ld.ico" />
+              </li>
+              <li>
+                  <img src = "./public/img/gh.ico" />
+                </li>
+            </ul>
+            <div id = "smallNav">
+            
+            </div>
+          </nav>
+          <div id = "sideNav">
+              <div id = "sideNav-content" >
+                <ul> 
+                  <li>
+                    <h2>
+                      <a id= "design" class = "red-color nav-font">DESIGN<br/></a>                  
+                    </h2>    
+                  </li>
+                  <li><h2>
+                      <a id = "develop" class = "blue-color nav-font">DEVELOP<br/></a>                  
+                    </h2>  </li>
+                    <li><h2>
+                        <a id = "project"  class = "orange-color nav-font">PROJECTS<br/></a>                  
+                      </h2>  </li>
+                      <li><h2>
+                          <a id = "contact" class = "green-color nav-font">CONTACT<br/></a>                  
+                      </h2>  </li>
+                  
+                </ul>
+              </div>
+          </div>
+          <div id = "sliding-nav">
+            <ul>  
+              <li id = "grey-box"></li>
+              <li id = "red-box"></li>
+              <li id = "blue-box"></li>
+              <li id = "orange-box"></li>
+              <li id = "green-box"></li>   
+            </ul>  
+          </div>
+     
+      <header>  
+        <!-- <video autoplay muted loop id="myVideo">
+              <source src="bg-video.mp4" type="video/mp4">
+              Your browser does not support HTML5 video.
+        </video> -->
+        <!-- <div id = "video-content">
+          <div class = "inner-content"> -->           
+                <h1 id = "hi">
+                    <span  class = "grey-trans">Hi,<br/></span>                  
+                  </h1>                  
+          <!-- </div>  
+                  </div>
+            </d iv> -->
+            <div class = "little-container grey-color">
+                <div id = "box-line">                    
+                  <hr class = "line"/> 
+                </div>      
+                <div id = "animate-head">
+                  <p>
+                    I'm  UI/UX Designer and Developer.                         
+                    I have serious passion creating website with better user experience followed with writing elegant, clean 
+                    and efficent code. 
+                  </p>            
+                </div>
+              
+        
+      
+<!--         <h2>
+          I'm Preeyash Pradhan. A UI/UX<span class = "red-color"> Designer</span> and a Front-end <span class = "red-color">Developer</span>.
+        </h2> -->
+      </header>       
+      <section id = "designer">   
+        <button class = "skill-buttons align-left margin-header">
+          Developer Skills
+        </button>      
+        <h1>
+          <span class = "red-color">DESIGNER SKILLS</span>
+        </h1>
+        <!-- <ul class = "carousel-box">
+          <li>
+              <span class = "content-box grey-color">
+                  <h2>  
+                    Prototyping
+                  </h2>
+                  <article>         
+                    Prototyping is the most essestial phase in creating websites. Mostly the prototyping start with the rough mock ups. After that mockups are changed to wireframes, based on the
+                    requirements changes.After that, the final design is implemented.
+                  </article>        
+                </span>
+          </li>          
+        </ul> -->
+        <div id = "list-content">
+            <div id = "prototyping" class = "content-box grey-color">
+                <h2>  
+                  Prototyping
+                </h2>
+                <article>         
+                  Prototyping is the most essestial phase in creating websites. Mostly the prototyping start with the rough mock ups. After that mockups are changed to wireframes, based on the
+                  requirements changes.After that, the final design is implemented.
+                </article>        
+            </div>
+            <!--
+            <div id = "proto-img"></div>
+            <div id = "create-img"></div>
+            <div id = "creativity" class = "content-box grey-color">
+                <h2>  
+                  Creativity
+                </h2>
+                <article>         
+                  Prototyping is the most essestial phase in creating websites. Mostly the prototyping start with the rough mock ups. After that mockups are changed to wireframes, based on the
+                  requirements changes.After that, the final design is implemented.
+                </article>        
+            </div>            
+            <div class = "content-box grey-color">
+                  <h2>  
+                    SEO
+                  </h2>
+                  <article>         
+                    Prototyping is the most essestial phase in creating websites. Mostly the prototyping start with the rough mock ups. After that mockups are changed to wireframes, based on the
+                    requirements changes.After that, the final design is implemented.
+                  </article>        
+            </div>
+            <div id = "seo-img"></div>
+            
+            <div id = "visual-img"></div>
+            <div class = "content-box grey-color">
+                  <h2>  
+                    Visual Design
+                  </h2>
+                  <article>         
+                    Prototyping is the most essestial phase in creating websites. Mostly the prototyping start with the rough mock ups. After that mockups are changed to wireframes, based on the
+                    requirements changes.After that, the final design is implemented.
+                  </article>        
+            </div>-->
+        </div>        
+      </section>  
+       
+      <section id = "developer">   
+        <div id = "button-box">
+            <button id ="ui-ux-button" class = "skill-buttons align-left margin-header">
+                UI/UX Skills
+            </button>    
+        </div>
+        <div id ="dv-box">   
+          <h1>    
+              <span id = "dv-item" class = "blue-color">DEVELOPER SKILLS</span>
+          </h1>
+        </div>
+        <div id = "dev-cont" class = "content-box grey-color">
+        <h2>
+          Code What I Design
+        </h2>
+        <article>         
+          I love designing websites and apps, and turning it into something fascinating using codes.
+          I have achieved  many skills that helped me through this process.
+        </article>        
+        </div>
+
+        <!-- <div  id = "skills-set">
+           <ul id = "icons-set">
+             <li class = "skills-icon"><i class="devicon-html5-plain"></i></li>             
+             <li class = "skills-icon"> <i class="devicon-css3-plain"></i></li>   
+                      
+             <li class = "skills-icon">  <i class="devicon-bootstrap-plain"></i></li>
+             <li class = "skills-icon"><i class="devicon-sass-original"></i></li>
+             <li class = "skills-icon"><i class="devicon-javascript-plain"></i></li>
+             <li class = "skills-icon"><i class="devicon-jquery-plain-wordmark"></i></li>
+             
+             <li class = "skills-icon"><i class="devicon-wordpress-plain"></i></li>
+             <li class = "skills-icon"><i class="devicon-typescript-plain"></i></li>
+             <li class = "skills-icon"> <i class="devicon-java-plain"></i></li>
+             <li class = "skills-icon"><i class="devicon-mysql-plain"></i></li>
+             <li class = "skills-icon"><i class="devicon-php-plain"></i></li>
+             <li class = "skills-icon"><i class="devicon-react-original"></i></li>
+             <li class = "skills-icon"><i class="devicon-git-plain"></i></li>
+             <li class = "skills-icon"><i class="devicon-express-original"></i></li>
+             <li class = "skills-icon"><i class="devicon-d3js-plain"></i></li>
+             <li class = "skills-icon"> <i class="devicon-cplusplus-plain"></i></li>
+             <li class = "skills-icon"><i class="devicon-csharp-plain"></i></li>
+           </ul>
+        </div> -->
+      </section>
+      <section id = "projects">      
+        <h1>
+          <span class = "orange-color">PROJECTS</span>
+        </h1>
+      </section>  
+        
+        <section id = "contacts">        
+        <h1>
+          <span class = "green-color">CONTACT</span>
+        </h1>
+        <div class = "content-box grey-color">     
+        </div>
+      </section>  
+    </div>
+  </body>
+  <script>
+       var testing = false;
+
+
+
+       $(window).scroll(function(){
+         if( $(this).scrollTop() < $("#designer").offset().top-30){
+           $("#grey-box").addClass('full-opacity');
+         }
+         else {
+           $('#grey-box').removeClass('full-opacity');
+         }
+       })
+       $(window).scroll(function(){
+         var eh = $('header').height();      
+         var dh = $('#designer').height(); 
+        //  var odv = $('#developer').offset.top() + 50;         
+        //  var op = $('#projects').offset.top() + 50;         
+        //  var oc = $('#contacts').offset.top() + 50;
+         var fraction = (30/100)*eh
+         var nav = $('nav');
+         var red =  $('#red-box');
+         
+         if ($(this).scrollTop() > (30/100)*eh && $(this).scrollTop() < ($('#designer').offset().top + (30/100)*dh)){
+            nav.addClass('red-bg');
+            red.addClass('full-opacity')
+         }
+         else {
+           nav.removeClass('red-bg');
+           red.removeClass('full-opacity');
+         }
+        // ($(this).scrollTop() > odv)?nav.addClass('blue-bg'):nav.removeClass('blue-bg')
+        // ($(this).scrollTop() > op)?nav.addClass('orange-bg'):nav.removeClass('orange-bg')
+        // ($(this).scrollTop() > oc)?nav.addClass('green-bg'):nav.removeClass('green-bg') 
+
+        // else if(scrolled > 200){      
+        //    $("#dv-item").fadeIn("slow"); 
+        //  }
+
+       })       
+
+       $(window).scroll(function(){
+        var nav = $('nav');            
+        var dh = $('#designer').height(); 
+        var ph = $('#projects').height();
+        var blue =  $('#blue-box');
+        if($(this).scrollTop() > ($("#designer").offset().top + (30/100)*dh) && $(this).scrollTop() < ($('#projects').offset().top -30)){
+            nav.addClass('blue-bg');
+            blue.addClass('full-opacity')
+        }
+        else {
+          nav.removeClass('blue-bg');
+          blue.removeClass('full-opacity');
+        }
+       })
+
+        $(window).scroll(function(){
+        var nav = $('nav');            
+        var deh = $('#developer').height(); 
+        var ch = $('#contacts').height();
+        var orange =  $('#orange-box');
+        if($(this).scrollTop() > ($("#developer").offset().top + (30/100)*deh) && $(this).scrollTop() < ($('#projects').offset().top + (30/100)*ch)){
+            nav.addClass('orange-bg');
+            orange.addClass('full-opacity');
+        }
+        else {
+          nav.removeClass('orange-bg');
+          orange.removeClass('full-opacity');
+        }
+       })
+
+        $(window).scroll(function(){
+        var nav = $('nav');            
+        var ph = $('#projects').height(); 
+        var ch = $('#contacts').height();
+        var green =  $('#green-box');
+        if($(this).scrollTop() > ($("#projects").offset().top + (30/100)*ph)  && $(this).scrollTop() < ($('#contacts').offset().top + (30/100)*ch)){
+            nav.addClass('green-bg');
+            green.addClass('full-opacity');
+        }
+        else {
+          nav.removeClass('green-bg');
+          green.removeClass('full-opacity');
+        }
+       })
+
+       $(window).scroll(function(){
+        var ui = $('#ui-ux-button');
+        if($(this).scrollTop() > ($("#designer").offset().top + 50)){
+          ui.addClass("animated fadeIn");
+        }
+       })
+
+        $(window).scroll(function(){
+        var dv = $('#dv-item');
+        if($(this).scrollTop() > ($("#designer").offset().top+200)){
+          dv.addClass("animated fadeIn");
+        }
+       })
+
+       
+       $(window).scroll(function(){
+        var dv = $('#dev-cont');
+        if($(this).scrollTop() > ($("#designer").offset().top+300)){
+          dv.addClass("animated fadeIn");
+        }
+       })
+     
+       $(".toggle-icon").click(function() {
+          $('nav').toggleClass("pushed");
+          $('#sideNav').toggleClass("pushSide")        
+          $("#sideNav-content" ).fadeToggle("slow");         
+          $("#smallNav").slideToggle(200);
+          $('body').toggleClass("stop-scroll");        
+      });
+
+      setTimeout(function(){
+        $('.line').addClass("display-line")
+       
+      },800)
+
+      $('#animate-head').addClass("animated fadeIn")
+      $('#hi').addClass("animated bounceIn")
+      
+
+
+      let getTo = ()=>{        
+          $('nav').removeClass("pushed");
+          $('#sideNav').removeClass("pushSide");
+          $('#sideNav-content').fadeOut();
+          $('#smallNav').slideUp(200);
+          $('body').removeClass("stop-scroll");
+      }
+      
+
+      // uncomment after wards
+        // $('html, body').animate({
+        //   scrollTop:$("header").offset().top
+        // },1)
+        
+      $("#develop").click(function(){
+        getTo();
+        $('html,body').animate({
+          scrollTop:$("#developer").offset().top - 30
+        },800)
+      })
+
+      $("#design").click(function(){
+        getTo();
+        $('html,body').animate({
+          scrollTop:$("#designer").offset().top - 30
+        },800)
+      })   
+    
+    $("#project").click(function(){
+        getTo();
+        $('html,body').animate({
+          scrollTop:$("#projects").offset().top - 30
+        },800)
+      })  
+    
+    $("#contact").click(function(){
+        getTo();
+        $('html,body').animate({
+          scrollTop:$("#contacts").offset().top -30
+        },800)
+      })  
+
+
+      $("#grey-box").click(function(){
+        $('html, body').animate({
+          scrollTop:$("header").offset().top
+        },800)
+      })
+
+      $("#red-box").click(function(){
+        $('html,body').animate({
+          scrollTop:$("#designer").offset().top -30
+        },800)
+      })
+
+      $("#blue-box").click(function(){
+        $('html,body').animate({
+          scrollTop:$("#developer").offset().top - 30
+        },800)
+      })
+
+      $("#orange-box").click(function(){
+        $('html,body').animate({
+          scrollTop:$("#projects").offset().top - 30
+        },800)
+      })
+
+      $("#green-box").click(function(){
+        $('html,body').animate({
+          scrollTop:$("#contacts").offset().top - 30
+        },800)
+      })
+      
+  </script>
+</html>
+ 
+<!-- 
+<li>
+    <span class = "content-box grey-color">
+        <h2>  
+          Creativity
+        </h2>
+        <article>         
+          Prototyping is the most essestial phase in creating websites. Mostly the prototyping start with the rough mock ups. After that mockups are changed to wireframes, based on the
+          requirements changes.After that, the final design is implemented.
+        </article>        
+    </span>
+</li>
+<li>
+    <span class = "content-box grey-color">
+        <h2>  
+          SEO
+        </h2>
+        <article>         
+          Prototyping is the most essestial phase in creating websites. Mostly the prototyping start with the rough mock ups. After that mockups are changed to wireframes, based on the
+          requirements changes.After that, the final design is implemented.
+        </article>        
+    </span>
+</li>
+<li>
+    <span class = "content-box grey-color">
+        <h2>  
+          Visual Design
+        </h2>
+        <article>         
+          Prototyping is the most essestial phase in creating websites. Mostly the prototyping start with the rough mock ups. After that mockups are changed to wireframes, based on the
+          requirements changes.After that, the final design is implemented.
+        </article>        
+    </span>
+</li> -->
