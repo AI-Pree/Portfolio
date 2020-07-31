@@ -9,7 +9,7 @@ const PORT = 5000;
 app.use('/public', express.static(__dirname + '/public'));
 
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + "/index.html")
+    res.sendFile(__dirname + '/index.html');
 });
 
 app.listen(PORT, () => {
