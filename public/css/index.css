@@ -50,11 +50,11 @@ h1 {
 }
 
 .grey-color {
-  color:#a9a9a9;
+  color:#5a5a5a;
 }
 
 .grey-trans {
-  color: rgba(0,0,0,0.1) !important;
+  color: #5a5a5a !important;
 }
 
 .blue-color {
@@ -65,9 +65,9 @@ h1 {
   color:#f75c03!important; 
 }
 
-.green-color {
+/* .green-color {
   color:#06a77d!important; 
-}
+} */
 
 
 .red-bg {
@@ -86,9 +86,9 @@ h1 {
   background-color:#f75c03!important; 
 }
 
-.green-bg {
+/* .green-bg {
   background-color:#06a77d!important; 
-}
+} */
 
 
 h2 {
@@ -130,8 +130,7 @@ article {
   'nav head snav'
   '.   desg .'
   '. dev .'  
-    '. proj .'
-    '. cont .';
+    '. proj .';
 }
 
 /* @media only screen and (max-width:800px){
@@ -163,7 +162,7 @@ article {
 }
 .grid > nav {
   grid-area:nav;
-  background-color:rgba(0, 0, 0, 0.1);
+  background-color:#5a5a5a;
   position: fixed;
   width:100px;
   margin:0;
@@ -250,41 +249,42 @@ article {
 }
 
 #grey-box {
- height:20%;
+ height:25%;
  width:100%;
- background-color: rgba(0, 0, 0, 0.1);
+ background-color:#5a5a5a;
  opacity:0.7;
 }
 #red-box {
-  height:20%;
+  height:25%;
   width:100%;
   background-color:#e51b43;
   opacity:0.7;
 }
 
 #blue-box {
-  height:20%;
+  height:25%;
   background-color: #002f6c;
   opacity:0.7;
 }
 
 #orange-box {
-  height:20%;
+  height:25%;
   background-color: #f75c03;
   opacity:0.7;
 }
 
-#green-box {
+/* #green-box {
   height:20%;
   background-color: #06a77d; 
   opacity:0.7;
-}
+} */
 
 
 
 #box-line {
 
 }
+
 .line {
   height:1px;
   border:0;

@@ -54,7 +54,7 @@ $(window).scroll(function () {
 $(window).scroll(function () {
     var nav = $('nav');
     var deh = $('#developer').height();
-    var ch = $('#contacts').height();
+    var ch = $('#projects').height();
     var orange = $('#orange-box');
     if ($(this).scrollTop() > ($("#developer").offset().top + (30 / 100) * deh) && $(this).scrollTop() < ($('#projects').offset().top + (30 / 100) * ch)) {
         nav.addClass('orange-bg');
@@ -66,20 +66,20 @@ $(window).scroll(function () {
     };
 });
 
-$(window).scroll(function () {
-    var nav = $('nav');
-    var ph = $('#projects').height();
-    var ch = $('#contacts').height();
-    var green = $('#green-box');
-    if ($(this).scrollTop() > ($("#projects").offset().top + (30 / 100) * ph) && $(this).scrollTop() < ($('#contacts').offset().top + (30 / 100) * ch)) {
-        nav.addClass('green-bg');
-        green.addClass('full-opacity');
-    }
-    else {
-        nav.removeClass('green-bg');
-        green.removeClass('full-opacity');
-    };
-});
+// $(window).scroll(function () {
+//     var nav = $('nav');
+//     var ph = $('#projects').height();
+//     var ch = $('#contacts').height();
+//     var green = $('#green-box');
+//     if ($(this).scrollTop() > ($("#projects").offset().top + (30 / 100) * ph) && $(this).scrollTop() < ($('#contacts').offset().top + (30 / 100) * ch)) {
+//         nav.addClass('green-bg');
+//         green.addClass('full-opacity');
+//     }
+//     else {
+//         nav.removeClass('green-bg');
+//         green.removeClass('full-opacity');
+//     };
+// });
 
 $(window).scroll(function () {
     var ui = $('#ui-ux-button');

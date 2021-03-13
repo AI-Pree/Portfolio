@@ -1,23 +1,22 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
-    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="theme-color" content="#000000">
 
-    <!--
+<head>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+  <link rel="stylesheet"
+    href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#000000">
+
+  <!--
       manifest.json provides metadata used when your web app is added to the
       homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
     -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <!--
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
       Only files inside the `public` folder can be referenced from the HTML.
@@ -27,109 +26,116 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
 
-    
-    <!-- Adding custom js files-->
-    <script type="text/javascript" src="public/js/custom.js"></script>
 
-    <!-- Adding custom css -->
-    <link id ="custom_css" rel="stylesheet" href="public/css/index.css"/>
+  <!-- Adding custom js files-->
+  <script type="text/javascript" src="public/js/custom.js"></script>
 
-    <title>Portfolio</title>
-  </head>
-  <body>
-    <div id="root"></div>    
-    
-    <div id = "container " class = "grid">
-        <nav > 
-            <div id="nav-container">
-                  <div class="toggle-icon">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                  </div><!-- /toggle-icon -->
-            </div><!-- /nav-container -->
-            
-            <ul class ="list-icons" >
-              <li>
-                <img src = "public/img/ld.ico" />
-              </li>
-              <li>
-                  <img src = "public/img/gh.ico" />
-                </li>
-            </ul>
-            <div id = "smallNav">
-            
-            </div>
-          </nav>
-          <div id = "sideNav">
-              <div id = "sideNav-content" >
-                <ul> 
-                  <li>
-                    <h2>
-                      <a id= "design" class = "red-color nav-font">DESIGN<br/></a>                  
-                    </h2>    
-                  </li>
-                  <li><h2>
-                      <a id = "develop" class = "blue-color nav-font">DEVELOP<br/></a>                  
-                    </h2>  </li>
-                    <li><h2>
-                        <a id = "project"  class = "orange-color nav-font">PROJECTS<br/></a>                  
-                      </h2>  </li>
-                      <li><h2>
-                          <a id = "contact" class = "green-color nav-font">CONTACT<br/></a>                  
-                      </h2>  </li>
-                  
-                </ul>
-              </div>
-          </div>
-          <div id = "sliding-nav">
-            <ul>  
-              <li id = "grey-box"></li>
-              <li id = "red-box"></li>
-              <li id = "blue-box"></li>
-              <li id = "orange-box"></li>
-              <li id = "green-box"></li>   
-            </ul>  
-          </div>
-     
-      <header>  
-        <!-- <video autoplay muted loop id="myVideo">
+  <!-- Adding custom css -->
+  <link id="custom_css" rel="stylesheet" href="public/css/index.css" />
+
+  <title>Portfolio</title>
+</head>
+
+<body>
+  <div id="root"></div>
+
+  <div id="container " class="grid">
+    <nav>
+      <div id="nav-container">
+        <div class="toggle-icon">
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div><!-- /toggle-icon -->
+      </div><!-- /nav-container -->
+
+      <ul class="list-icons">
+        <li>
+          <img src="public/img/ld.ico" />
+        </li>
+        <li>
+          <a href="https://github.com/AI-Pree"><img src="public/img/gh.ico" /></a>
+        </li>
+      </ul>
+      <div id="smallNav">
+
+      </div>
+    </nav>
+    <div id="sideNav">
+      <div id="sideNav-content">
+        <ul>
+          <li>
+            <h2>
+              <a id="design" class="red-color nav-font">DESIGN<br /></a>
+            </h2>
+          </li>
+          <li>
+            <h2>
+              <a id="develop" class="blue-color nav-font">DEVELOP<br /></a>
+            </h2>
+          </li>
+          <li>
+            <h2>
+              <a id="project" class="orange-color nav-font">PROJECTS<br /></a>
+            </h2>
+          </li>
+          <!-- <li>
+            <h2>
+              <a id="contact" class="green-color nav-font">CONTACT<br /></a>
+            </h2>
+          </li> -->
+
+        </ul>
+      </div>
+    </div>
+    <div id="sliding-nav">
+      <ul>
+        <li id="grey-box"></li>
+        <li id="red-box"></li>
+        <li id="blue-box"></li>
+        <li id="orange-box"></li>
+        <!-- <li id="green-box"></li> -->
+      </ul>
+    </div>
+
+    <header>
+      <!-- <video autoplay muted loop id="myVideo">
               <source src="bg-video.mp4" type="video/mp4">
               Your browser does not support HTML5 video.
         </video> -->
-        <!-- <div id = "video-content">
-          <div class = "inner-content"> -->           
-                <h1 id = "hi">
-                    <span  class = "grey-trans">Hi,<br/></span>                  
-                  </h1>                  
-          <!-- </div>  
+      <!-- <div id = "video-content">
+          <div class = "inner-content"> -->
+      <h1 id="hi">
+        <span class="grey-trans">Hi,<br /></span>
+      </h1>
+      <!-- </div>  
                   </div>
             </d iv> -->
-            <div class = "little-container grey-color">
-                <div id = "box-line">                    
-                  <hr class = "line"/> 
-                </div>      
-                <div id = "animate-head">
-                  <p>
-                    I'm  UI/UX Designer and Developer.                         
-                    I have serious passion creating website with better user experience followed with writing elegant, clean 
-                    and efficent code. 
-                  </p>            
-                </div>
-              
-        
-      
-<!--         <h2>
+      <div class="little-container grey-color">
+        <div id="box-line">
+          <hr class="line" />
+        </div>
+        <div id="animate-head">
+          <p>
+            I'm a Software Engineer.
+            I have a serious passion for software development followed with writing elegant, clean
+            and efficent code.
+          </p>
+        </div>
+
+
+
+        <!--         <h2>
           I'm . A UI/UX<span class = "red-color"> Designer</span> and a Front-end <span class = "red-color">Developer</span>.
         </h2> -->
-      </header>       
-      <section id = "designer">   
-        <button class = "skill-buttons align-left margin-header">
-          Developer Skills
-        </button>      
-        <h1>
-          <span class = "red-color">DESIGNER SKILLS</span>
-        </h1>
-        <!-- <ul class = "carousel-box">
+    </header>
+    <section id="designer">
+      <button class="skill-buttons align-left margin-header">
+        Developer Skills
+      </button>
+      <h1>
+        <span class="red-color">DESIGNER SKILLS</span>
+      </h1>
+      <!-- <ul class = "carousel-box">
           <li>
               <span class = "content-box grey-color">
                   <h2>  
@@ -142,17 +148,18 @@
                 </span>
           </li>          
         </ul> -->
-        <div id = "list-content">
-            <div id = "prototyping" class = "content-box grey-color">
-                <h2>  
-                  Prototyping
-                </h2>
-                <article>         
-                  Prototyping is the most essestial phase in creating websites. Mostly the prototyping start with the rough mock ups. After that mockups are changed to wireframes, based on the
-                  requirements changes.After that, the final design is implemented.
-                </article>        
-            </div>
-            <!--
+      <div id="list-content">
+        <div id="prototyping" class="content-box grey-color">
+          <h2>
+            Prototyping
+          </h2>
+          <article>
+            Prototyping is the most essestial phase in creating websites. Mostly the prototyping start with the rough
+            mock ups. After that mockups are changed to wireframes, based on the
+            requirements changes.After that, the final design is implemented.
+          </article>
+        </div>
+        <!--
             <div id = "proto-img"></div>
             <div id = "create-img"></div>
             <div id = "creativity" class = "content-box grey-color">
@@ -185,31 +192,31 @@
                     requirements changes.After that, the final design is implemented.
                   </article>        
             </div>-->
-        </div>        
-      </section>  
-       
-      <section id = "developer">   
-        <div id = "button-box">
-            <button id ="ui-ux-button" class = "skill-buttons align-left margin-header">
-                UI/UX Skills
-            </button>    
-        </div>
-        <div id ="dv-box">   
-          <h1>    
-              <span id = "dv-item" class = "blue-color">DEVELOPER SKILLS</span>
-          </h1>
-        </div>
-        <div id = "dev-cont" class = "content-box grey-color">
+      </div>
+    </section>
+
+    <section id="developer">
+      <div id="button-box">
+        <button id="ui-ux-button" class="skill-buttons align-left margin-header">
+          UI/UX Skills
+        </button>
+      </div>
+      <div id="dv-box">
+        <h1>
+          <span id="dv-item" class="blue-color">DEVELOPER SKILLS</span>
+        </h1>
+      </div>
+      <div id="dev-cont" class="content-box grey-color">
         <h2>
           Code What I Design
         </h2>
-        <article>         
+        <article>
           I love designing websites and apps, and turning it into something fascinating using codes.
-          I have achieved  many skills that helped me through this process.
-        </article>        
-        </div>
+          I have achieved many skills that helped me through this process.
+        </article>
+      </div>
 
-        <!-- <div  id = "skills-set">
+      <!-- <div  id = "skills-set">
            <ul id = "icons-set">
              <li class = "skills-icon"><i class="devicon-html5-plain"></i></li>             
              <li class = "skills-icon"> <i class="devicon-css3-plain"></i></li>   
@@ -232,113 +239,114 @@
              <li class = "skills-icon"><i class="devicon-csharp-plain"></i></li>
            </ul>
         </div> -->
-      </section>
-      <section id = "projects">      
-        <h1>
-          <span class = "orange-color">PROJECTS</span>
-        </h1>
-      </section>  
-        
-        <section id = "contacts">        
+    </section>
+    <section id="projects">
+      <h1>
+        <span class="orange-color">PROJECTS</span>
+      </h1>
+    </section>
+
+    <!-- <section id = "contacts">        
         <h1>
           <span class = "green-color">CONTACT</span>
         </h1>
         <div class = "content-box grey-color">     
         </div>
-      </section>  
-    </div>
-  </body>
-  <script>
-    $(".toggle-icon").click(function () {
-      $('nav').toggleClass("pushed")
-      $('#sideNav').toggleClass("pushSide")
-      $("#sideNav-content").fadeToggle("slow")
-      $("#smallNav").slideToggle(200)
-      $('body').toggleClass("stop-scroll")
-    });
+      </section>   -->
+  </div>
+</body>
+<script>
+  $(".toggle-icon").click(function () {
+    $('nav').toggleClass("pushed")
+    $('#sideNav').toggleClass("pushSide")
+    $("#sideNav-content").fadeToggle("slow")
+    $("#smallNav").slideToggle(200)
+    $('body').toggleClass("stop-scroll")
+  });
 
-      setTimeout(function () {
-        $('.line').addClass("display-line");
-      }, 800);
+  setTimeout(function () {
+    $('.line').addClass("display-line");
+  }, 800);
 
-      $('#animate-head').addClass("animated fadeIn");
-      $('#hi').addClass("animated bounceIn");
+  $('#animate-head').addClass("animated fadeIn");
+  $('#hi').addClass("animated bounceIn");
 
-      let getTo = () => {
-        $('nav').removeClass("pushed");
-        $('#sideNav').removeClass("pushSide");
-        $('#sideNav-content').fadeOut();
-        $('#smallNav').slideUp(200);
-        $('body').removeClass("stop-scroll");
-      };
-
-
-      // uncomment after wards
-      // $('html, body').animate({
-      //   scrollTop:$("header").offset().top
-      // },1)
-
-      $("#develop").click(function () {
-        getTo();
-        $('html,body').animate({
-          scrollTop: $("#developer").offset().top - 30
-        }, 800);
-      });
-
-      $("#design").click(function () {
-        getTo();
-        $('html,body').animate({
-          scrollTop: $("#designer").offset().top - 30
-        }, 800);
-      });
-
-      $("#project").click(function () {
-        getTo();
-        $('html,body').animate({
-          scrollTop: $("#projects").offset().top - 30
-        }, 800);
-      });
-
-      $("#contact").click(function () {
-        getTo();
-        $('html,body').animate({
-          scrollTop: $("#contacts").offset().top - 30
-        }, 800);
-      });
+  let getTo = () => {
+    $('nav').removeClass("pushed");
+    $('#sideNav').removeClass("pushSide");
+    $('#sideNav-content').fadeOut();
+    $('#smallNav').slideUp(200);
+    $('body').removeClass("stop-scroll");
+  };
 
 
-      $("#grey-box").click(function () {
-        $('html, body').animate({
-          scrollTop: $("header").offset().top
-        }, 800);
-      });
+  // uncomment after wards
+  // $('html, body').animate({
+  //   scrollTop:$("header").offset().top
+  // },1)
 
-      $("#red-box").click(function () {
-        $('html,body').animate({
-          scrollTop: $("#designer").offset().top - 30
-        }, 800);
-      });
+  $("#develop").click(function () {
+    getTo();
+    $('html,body').animate({
+      scrollTop: $("#developer").offset().top - 30
+    }, 800);
+  });
 
-      $("#blue-box").click(function () {
-        $('html,body').animate({
-          scrollTop: $("#developer").offset().top - 30
-        }, 800);
-      });
+  $("#design").click(function () {
+    getTo();
+    $('html,body').animate({
+      scrollTop: $("#designer").offset().top - 30
+    }, 800);
+  });
 
-      $("#orange-box").click(function () {
-        $('html,body').animate({
-          scrollTop: $("#projects").offset().top - 30
-        }, 800);
-      });
+  $("#project").click(function () {
+    getTo();
+    $('html,body').animate({
+      scrollTop: $("#projects").offset().top - 30
+    }, 800);
+  });
 
-      $("#green-box").click(function () {
-        $('html,body').animate({
-          scrollTop: $("#contacts").offset().top - 30
-        }, 800);
-      });
-  </script>
+  // $("#contact").click(function () {
+  //   getTo();
+  //   $('html,body').animate({
+  //     scrollTop: $("#contacts").offset().top - 30
+  //   }, 800);
+  // });
+
+
+  $("#grey-box").click(function () {
+    $('html, body').animate({
+      scrollTop: $("header").offset().top
+    }, 800);
+  });
+
+  $("#red-box").click(function () {
+    $('html,body').animate({
+      scrollTop: $("#designer").offset().top - 30
+    }, 800);
+  });
+
+  $("#blue-box").click(function () {
+    $('html,body').animate({
+      scrollTop: $("#developer").offset().top - 30
+    }, 800);
+  });
+
+  $("#orange-box").click(function () {
+    $('html,body').animate({
+      scrollTop: $("#projects").offset().top - 30
+    }, 800);
+  });
+
+  // $("#green-box").click(function () {
+  //   $('html,body').animate({
+  //     scrollTop: $("#contacts").offset().top - 30
+  //   }, 800);
+  // });
+</script>
+
 </html>
- 
+
 <!-- 
 <li>
     <span class = "content-box grey-color">
