@@ -655,3 +655,33 @@ footer {
   0%   { transform: translate(0, 0); }
   100% { transform: translate(-100%, 0); }
 }
+
+/* buttons for carousel */
+#slider {
+  padding-bottom: 10px;
+  margin: 20px 20px 20px;
+  background: #fff;
+  position: relative;
+  width:110px;
+}
+
+.prev-next-button {
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background:#ccc;
+  border: none;
+  /* no svg fallback */
+  font-size: 30px;
+  color: white;
+  transform: translateY(-50%);
+}
+
+.prev-next-button:hover {
+  background-color: #fd6a02;
+}
+
+.previous { left: 10px; }
+.next { right: 10px; }
