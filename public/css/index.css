@@ -624,3 +624,34 @@ article {
   grid-gap:50px;
   margin-bottom: 50px;
 }
+
+
+footer {
+  position: fixed;
+  height: 50px;
+  width:100%;
+  z-index: 100;
+  bottom:-2px;
+}
+
+.marquee {
+  width: 100%;
+  line-height: 50px;
+  background-color: transparent;
+  color: Black;
+  white-space: nowrap;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.marquee p {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 10s linear infinite;
+  font-weight: bolder;
+  font-style: italic;
+}
+
+@keyframes marquee {
+  0%   { transform: translate(0, 0); }
+  100% { transform: translate(-100%, 0); }
+}
