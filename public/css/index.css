@@ -668,6 +668,10 @@ footer {
   width:110px;
 }
 
+#project-carousel {
+  height:300px;
+  width:100%;
+}
 
 .prev-next-button {
   position: absolute;
@@ -708,7 +712,7 @@ footer {
 }
 
 .project-box{
-  width:175px;
+  width:250px;
   float:right;
   color:#5a5a5a;
   padding:15px;
@@ -736,10 +740,10 @@ footer {
   xmargin-right:2px;
 }
 
-#project1{
+/* #project1{
   background-color: darkblue;
 }
-
+ 
 #project2 {
   background-color: crimson;
 }
@@ -747,5 +751,5 @@ footer {
 
 .project-box {
   color:white;
-}
+} */
 /* coloring individual project container */
