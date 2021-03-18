@@ -116,7 +116,6 @@
         </div>
         <div id="animate-head">
           <p>
-            I'm a Software Engineer.
             I have a serious passion for software development followed with writing elegant, clean
             and efficent code.
           </p>
@@ -133,7 +132,7 @@
         Developer Skills
       </button>
       <h1>
-        <span class="red-color">DESIGNER SKILLS</span>
+        <span class="red-color">DEVELOPER SKILLS</span>
       </h1>
       <!-- <ul class = "carousel-box">
           <li>
@@ -244,6 +243,18 @@
       <h1>
         <span class="orange-color">PROJECTS</span>
       </h1>
+      <div id="proj-cont" class="content-box grey-color">
+        <h2>
+          Why I work on projects
+        </h2>
+        <article>
+              I love working on projects related to low level machines, programming languages, blockchain, cloud (cloud architecture), 
+              game development and web application (focus on system architecture of the app) in general.This helped me learn heaps about new technology and tools practiced in IT.
+              <br>
+              <br>
+              These projects are mostly based on my own personal interests.
+        </article>
+      </div>
     </section>
 
     <!-- <section id = "contacts">        
@@ -258,8 +269,8 @@
 <script>
   $(".toggle-icon").click(function () {
     $('nav').toggleClass("pushed")
-    $('#sideNav').toggleClass("pushSide")
-    $("#sideNav-content").fadeToggle("slow")
+    $('#sideNav').toggleClass("pushSide-in")
+    // $("#sideNav-content").fadeToggle("slow")
     $("#smallNav").slideToggle(200)
     $('body').toggleClass("stop-scroll")
   });
@@ -273,7 +284,7 @@
 
   let getTo = () => {
     $('nav').removeClass("pushed");
-    $('#sideNav').removeClass("pushSide");
+    $('#sideNav').removeClass("pushSide-in");
     $('#sideNav-content').fadeOut();
     $('#smallNav').slideUp(200);
     $('body').removeClass("stop-scroll");
