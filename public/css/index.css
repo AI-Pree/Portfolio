@@ -617,6 +617,9 @@ article {
 
 /* list  */
 
+li {
+  list-style: none;
+}
 
 #list-content {
   display:grid;
@@ -665,6 +668,7 @@ footer {
   width:110px;
 }
 
+
 .prev-next-button {
   position: absolute;
   top: 50%;
@@ -685,3 +689,63 @@ footer {
 
 .previous { left: 10px; }
 .next { right: 10px; }
+
+
+.number-header {
+  font-size: 30px;
+  font-weight: bolder;
+  font-family: "jetbrains mono nl extrabold";
+  margin-bottom:30px;
+}
+
+.carousel-header {
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
+  font-weight: bolder;
+  font-size: 40px;
+  float:right;
+  font-family: "jetbrains mono nl extrabold";
+}
+
+.project-box{
+  width:175px;
+  float:right;
+  color:#5a5a5a;
+  padding:15px;
+  height:100%;
+}
+
+.project-box p {
+  font-size: 13px;
+  xpadding:20px;
+}
+
+.content-container {
+  height:100%;
+  width:100%;
+  padding:20px;
+  overflow:hidden;
+}
+
+
+
+.project-collection li {
+  height:300px;
+  float:left;
+  xmargin-left:2px;
+  xmargin-right:2px;
+}
+
+#project1{
+  background-color: darkblue;
+}
+
+#project2 {
+  background-color: crimson;
+}
+
+
+.project-box {
+  color:white;
+}
+/* coloring individual project container */
