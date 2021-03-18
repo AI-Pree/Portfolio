@@ -2,6 +2,14 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,900');
 
 
+/* variables for the colors used in the website */
+:root {
+  --red:#e51b43;
+  --grey:#5a5a5a;
+  --blue:#002f6c!important;
+  --orange:#f75c03!important;
+}
+
 
 body {
   font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
@@ -119,7 +127,7 @@ article {
 
 }
 
-
+/* overall grid layout using flex */
 .grid {
   height:100vh;
   display:grid;
@@ -131,6 +139,57 @@ article {
   '.   desg .'
   '. dev .'  
     '. proj .';
+}
+
+/* side info invisible when not hoverd */
+
+/* Reminder */
+/* need to remove the redundant code */
+
+#grey-box .side-info {
+  display:none;
+}
+#grey-box:hover .side-info {
+  display:block;
+}
+ 
+#red-box .side-info {
+  display:none;
+}
+#red-box:hover .side-info {
+  color:var(--red);
+  display:block;
+}
+
+#blue-box .side-info {
+  
+  display:none;
+}
+#blue-box:hover .side-info {
+  color:var(--blue);
+  display:block;
+}
+
+#orange-box .side-info {
+  display:none;
+}
+#orange-box:hover .side-info {
+  color:var(--orange);
+  display:block;
+}
+
+
+
+/* info for the right handside nav line */
+.side-info{
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
+  left: -22px;
+  position: relative;
+  top: 30%;
+  font-size: small;
+  font-weight: 600;
+
 }
 
 /* @media only screen and (max-width:800px){
@@ -233,7 +292,7 @@ article {
   grid-area:snav;
   position: fixed;
   right:0;
-  width:10px;
+  width:6px;
   margin:0;
   height: 100%;
   display: flex;
