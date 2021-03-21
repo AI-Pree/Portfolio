@@ -20,6 +20,33 @@ h2,h3,h4 {
   margin:5px;
 }
 
+th,td,tr {
+  padding:0px 15px 0px 15px;
+}
+
+table {
+  color:var(--grey);
+  border-collapse: collapse;
+}
+
+
+.heading2-small {
+  font-size:40px;
+}
+
+th {
+  font-weight:bolder;
+  text-align: left;
+}
+
+tr:hover {
+  color:red;
+}
+
+td p {
+  font-size:13px;
+  color:var(--grey);
+}
 
 /* .margin-header {
   margin:0% 10% 0% 10%;
@@ -112,9 +139,12 @@ section {
 } 
 
 article {
-  display:flex;
-  margin-left:10px;
-  font-size:15px;
+  display: flex;
+  margin-left: 10px;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+  word-spacing: 1px;
+  line-height: 17px;
 }
 .skill-buttons {
   border-radius:5px;
@@ -123,8 +153,23 @@ article {
   background:#f0f0f0;
   color:#A9A9A9;
   margin:3px;
-  width:160px;
+  width:175px;
 
+}
+
+.header-distance {
+  padding-top:40px;
+}
+
+.link-icons {
+  width:32px;
+  height:32px;
+  transition: 0.2s linear;
+}
+
+.link-icons:hover {
+  width: 35px;
+  height: 35px;
 }
 
 /* overall grid layout using flex */
@@ -696,11 +741,12 @@ footer {
 #show-projects {
   height:auto;
   width:auto;
+  margin:10px;
 }
 
 .expand {
   /* position : absolute; */
-  top: 50%;
+  xtop: 50%;
   width: 40px;
   height: 40px;
   background:var(--orange);
@@ -708,13 +754,27 @@ footer {
   /* no svg fallback */
   font-size: 30px;
   color: white;
-  transform: translateY(-50%);
-  margin:50px 0px 0px 10px;
+  xtransform: translateY(-50%);
+  xmargin:50px 0px 0px 10px;
   cursor: pointer;
+  transition: 1s ease-in-out;
+}
+
+#project-archive {
+  display:none;
+}
+
+.expand:active #expand-arrow {
+  display:none;
 }
 
 .expand:hover {
   opacity:0.7;
+}
+
+.expand:active {
+  height:400px;
+  width:100%;
 }
 
 .prev-next-button:hover {
@@ -723,6 +783,7 @@ footer {
 
 .previous { left: 10px; }
 .next { right: 10px; }
+
 
 
 .number-header {
@@ -738,7 +799,7 @@ footer {
   font-weight: bolder;
   font-size: 40px;
   float:right;
-  font-family: "jetbrains mono nl extrabold";
+  xfont-family: "jetbrains mono nl extrabold";
   color:var(--orange);
 }
 
@@ -761,7 +822,7 @@ footer {
 
 .content-container {
   height:100%;
-  width:800px;
+  width:860px;
   padding:10px;
   overflow:hidden;
 }
@@ -781,10 +842,26 @@ footer {
 }
 
 
+
+@media screen and (max-width:1000px) {
+/* project collection should move left by -586 px */
+  /* accessing pseudo class propertey for the buttons */
+  .next:active {
+    background-color: blue;
+
+    @keyframes project-collection {
+        /* accessing pseudo class propertey for the buttons */
+    
+    }
+  }
+}
+
+/* on normal screen size, project collection should move left by -866px */
+
 @media screen and (max-width: 1000px) {
   .content-container {
     height: 100%;
-    width: 601px;
+    width: 575px;
     padding: 10px;
     overflow: hidden;
   }
