@@ -31,7 +31,7 @@ td {
 table {
   color:var(--grey);
   border-collapse: collapse;
-  margin:0 auto;
+  xmargin:0 auto;
 }
 
 /* border radius for the table row */
@@ -194,7 +194,7 @@ article {
   height:100vh;
   display:grid;
   grid-template-columns:100px 5fr 1fr;
-  grid-template-rows:100% 100% 100% 100%;
+  grid-template-rows:100% 100% 100% auto ;
   grid-gap:0px 50px;
   grid-template-areas:
   'nav head snav'
@@ -202,6 +202,7 @@ article {
   '. dev .'  
   '. proj .';
 }
+
 
 /* side info invisible when not hoverd */
 
@@ -344,11 +345,11 @@ article {
   grid-area:proj;
 }
 
-.grid #contacts{
+/* .grid #contacts{
   width:auto;
   height:auto;
   grid-area:cont;
-}
+} */
 
 
 .grid > #sliding-nav {
@@ -744,6 +745,7 @@ footer {
 #project-carousel {
   height:auto;
   width:100%;
+  margin-bottom:60px;
 }
 
 .prev-next-button {
@@ -763,7 +765,7 @@ footer {
 #show-projects {
   height:auto;
   width:auto;
-  margin:10px;
+  margin:10px 0px 20px 0px;
 }
 
 .expand {
@@ -854,7 +856,7 @@ footer {
 .project-collection {
   display: inline-flex;
   flex-direction: row;
-  
+  padding-left:10px;
   
   /* height:auto;
   float:left;
@@ -884,7 +886,7 @@ footer {
   .content-container {
     height: 100%;
     width: 575px;
-    padding: 10px;
+    padding: 10px 10px 10px 0px;
     overflow: hidden;
   }
 }
@@ -902,3 +904,39 @@ footer {
   color:white;
 } */
 /* coloring individual project container */
+
+/* footer */
+#footer {
+  height:20px;
+  width:auto;
+  margin: 10px;
+  padding:20px;
+  text-align: center;
+}
+
+#footer a:hover{
+
+  color: var(--orange) !important;
+
+}
+
+ul.skills {
+  padding-left:5px;
+  width:270px;
+}
+
+/* My arrows */
+ul.skills li::before {
+  content: "➤";
+  color: var(--red);
+  font-size: 11px;
+  line-height: 12px;
+}
+
+ul.skills li {
+  padding:5px;
+  font-size: 13px;
+  font-family:Helvetica;
+  float:left;
+  width:120px;
+}
