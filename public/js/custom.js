@@ -81,24 +81,24 @@ $(window).scroll(function () {
 //     };
 // });
 
-$(window).scroll(function () {
-    var ui = $('#ui-ux-button');
-    if ($(this).scrollTop() > ($("#designer").offset().top + 50)) {
-        ui.addClass("animated fadeIn");
-    };
-});
+// $(window).scroll(function () {
+//     var ui = $('.ui-ux-button');
+//     if ($(this).scrollTop() > ($("#designer").offset().top + 50)) {
+//         ui.addClass("animated fadeIn");
+//     };
+// });
 
-$(window).scroll(function () {
-    var dv = $('#dv-item');
-    if ($(this).scrollTop() > ($("#designer").offset().top + 200)) {
-        dv.addClass("animated fadeIn");
-    };
-});
+// $(window).scroll(function () {
+//     var dv = $('#dv-item');
+//     if ($(this).scrollTop() > ($("#designer").offset().top + 200)) {
+//         dv.addClass("animated fadeIn");
+//     };
+// });
 
 
-$(window).scroll(function () {
-    var dv = $('#dev-cont');
-    if ($(this).scrollTop() > ($("#designer").offset().top + 300)) {
-        dv.addClass("animated fadeIn");
-    };
-});
+// $(window).scroll(function () {
+//     var dv = $('#dev-cont');
+//     if ($(this).scrollTop() > ($("#designer").offset().top + 300)) {
+//         dv.addClass("animated fadeIn");
+//     };
+// });

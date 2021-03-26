@@ -194,13 +194,13 @@ article {
   height:100vh;
   display:grid;
   grid-template-columns:100px 5fr 1fr;
-  grid-template-rows:100% auto 100% 100% 100%;
+  grid-template-rows:100% 100% 100% 100%;
   grid-gap:0px 50px;
   grid-template-areas:
   'nav head snav'
-  '.   desg .'
+  '. desg .'
   '. dev .'  
-    '. proj .';
+  '. proj .';
 }
 
 /* side info invisible when not hoverd */
@@ -622,7 +622,7 @@ article {
 }
 
 
-#ui-ux-button,#dv-item, #dev-cont{
+.ui-ux-button,#dv-item, #dev-cont{
   animation-delay: 0.5s;
   opacity:0;
 }
