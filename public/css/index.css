@@ -182,11 +182,11 @@ article {
   width:32px;
   height:32px;
   transition: 0.2s linear;
+  position: relative;
 }
 
 .link-icons:hover {
-  width: 35px;
-  height: 35px;
+  bottom:2px;
 }
 
 /* overall grid layout using flex */
@@ -940,7 +940,14 @@ ul.skills li {
   font-family:Helvetica;
   float:left;
   width:150px;
+  cursor: pointer;
+  margin-right:5px;
+  margin-left:5px;
 }
+ul.skills li:hover {
+  border: 2px dashed var(--red);
+}
+
 
 /* .language {
   display: none;
