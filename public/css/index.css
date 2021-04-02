@@ -56,7 +56,7 @@ tbody tr {
 
 tbody tr:hover {
   background-color: #ebebeb;
-  border-radius: 10px;
+  xborder-radius: 10px;
   cursor: pointer;
 }
 
@@ -943,6 +943,7 @@ ul.skills li {
   cursor: pointer;
   margin-right:5px;
   margin-left:5px;
+  border:2px solid #fff;
 }
 ul.skills li:hover {
   border: 2px dashed var(--red);
