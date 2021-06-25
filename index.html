@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+  <link rel="stylesheet"
+    href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#000000">
+
+  <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+    -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+
+
+  <!-- Adding custom js files-->
+  <script type="text/javascript" src="public/js/custom.js"></script>
+
+  <!-- Adding custom css -->
+  <link id="custom_css" rel="stylesheet" href="public/css/index.css" />
+
+  <title>Portfolio</title>
+</head>
+
+<body>
+  <div id="root"></div>
+  <div id="color-mode">
+
+  </div>
+  <div id="container " class="grid">
+    <nav>
+      <div id="nav-container">
+        <div class="toggle-icon">
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div><!-- /toggle-icon -->
+      </div><!-- /nav-container -->
+
+      <ul class="list-icons">
+        <!-- <li>
+          <img src="public/img/ld.ico" />
+        </li> -->
+        <li>
+          <a href="https://github.com/AI-Pree">
+            <img class="link-icons" src="public/img/gh.ico" />
+          </a>
+        </li>
+      </ul>
+      <div id="smallNav">
+
+      </div>
+    </nav>
+    <div id="sideNav">
+      <div id="sideNav-content">
+        <ul>
+          <li>
+            <h2>
+              <a id="design" class="red-color nav-font">ABOUT ME<br /></a>
+            </h2>
+          </li>
+          <li>
+            <h2>
+              <a id="develop" class="blue-color nav-font">EXPERIENCE<br /></a>
+            </h2>
+          </li>
+          <li>
+            <h2>
+              <a id="project" class="orange-color nav-font">PROJECTS<br /></a>
+            </h2>
+          </li>
+          <!-- <li>
+            <h2>
+              <a id="contact" class="green-color nav-font">CONTACT<br /></a>
+            </h2>
+          </li> -->
+
+        </ul>
+      </div>
+    </div>
+    <div id="sliding-nav">
+      <ul>
+        <li id="grey-box">
+          <span class="side-info">Home</p>
+        </li>
+        <li id="red-box">
+          <span class="side-info">skills</p>
+        </li>
+        <li id="blue-box">
+          <span class="side-info">Experiences</p>
+        </li>
+        <li id="orange-box">
+          <span class="side-info">Projects</p>
+        </li>
+        <!-- <li id="green-box"></li> -->
+      </ul>
+    </div>
+
+    <header>
+      <!-- <video autoplay muted loop id="myVideo">
+              <source src="bg-video.mp4" type="video/mp4">
+              Your browser does not support HTML5 video.
+        </video> -->
+      <!-- <div id = "video-content">
+          <div class = "inner-content"> -->
+      <h1 id="hi">
+        <span class="grey-trans">Hi,<br /></span>
+      </h1>
+      <h2>
+        <span> I build scalable web applications.</span>
+      </h2>
+      <!-- </div>  
+                  </div>
+            </d iv> -->
+      <div class="little-container grey-color">
+        <div id="box-line">
+          <hr class="line" />
+        </div>
+        <div id="animate-head">
+          <p>
+            I have a serious passion for software development followed with writing elegant, clean
+            and efficent code.
+          </p>
+        </div>
+
+
+
+        <!--         <h2>
+          I'm . A UI/UX<span class = "red-color"> Designer</span> and a Front-end <span class = "red-color">Developer</span>.
+        </h2> -->
+    </header>
+    <section id="designer">
+      <button class="skill-buttons align-left margin-header">
+        Developer Skills
+      </button>
+      <h2>
+        <span class="red-color">About Me</span>
+      </h2>
+      <!-- <ul class = "carousel-box">
+          <li>
+              <span class = "content-box grey-color">
+                  <h2>  
+                    Prototyping
+                  </h2>
+                  <article>         
+                    Prototyping is the most essestial phase in creating websites. Mostly the prototyping start with the rough mock ups. After that mockups are changed to wireframes, based on the
+                    requirements changes.After that, the final design is implemented.
+                  </article>        
+                </span>
+          </li>          
+        </ul> -->
+      <div id="prototyping" class="content-box grey-color">
+        <h2 class="heading2-small">
+          Project Interests
+        </h2>
+        <article>
+          I love working on projects related to low level machines, cloud (cloud architecture), game development and web
+          application
+          (focus on system architecture of the app) in general.This helped me learn heaps about new technology and tools
+          practiced in
+          IT. Currently, I'm learning about blockchain and system design to broaden my knowledge futher.
+
+        </article>
+        <ul class ="skills language">
+          <li>
+            C/C++
+            <!-- <span class = "language">
+              I usually use C/C++ related to network programming,
+              system level programming (creating daemons and other low level) and
+              machine learning.
+              I'm planning to do some embeded programming in future.
+
+            </span> -->
+          </li>
+          <li>
+            Go
+          </li>
+          <li>
+            Python
+          </li>
+          <li>
+            Javascript 
+          </li>
+          <li>
+            Typescript
+          </li>
+          <li>
+            C#
+          </li>
+          <li>
+            Rust
+          </li>
+          <li>
+            HTML and CSS
+          </li>
+          <li>
+            Erlang and Elixir
+          </li>
+          <li>
+            Julia
+          </li>
+        </ul>
+        
+      </div>
+
+      <!--
+            <div id = "proto-img"></div>
+            <div id = "create-img"></div>
+            <div id = "creativity" class = "content-box grey-color">
+                <h2>  
+                  Creativity
+                </h2>
+                <article>         
+                  Prototyping is the most essestial phase in creating websites. Mostly the prototyping start with the rough mock ups. After that mockups are changed to wireframes, based on the
+                  requirements changes.After that, the final design is implemented.
+                </article>        
+            </div>            
+            <div class = "content-box grey-color">
+                  <h2>  
+                    SEO
+                  </h2>
+                  <article>         
+                    Prototyping is the most essestial phase in creating websites. Mostly the prototyping start with the rough mock ups. After that mockups are changed to wireframes, based on the
+                    requirements changes.After that, the final design is implemented.
+                  </article>        
+            </div>
+            <div id = "seo-img"></div>
+            
+            <div id = "visual-img"></div>
+            <div class = "content-box grey-color">
+                  <h2>  
+                    Visual Design
+                  </h2>
+                  <article>         
+                    Prototyping is the most essestial phase in creating websites. Mostly the prototyping start with the rough mock ups. After that mockups are changed to wireframes, based on the
+                    requirements changes.After that, the final design is implemented.
+                  </article>        
+            </div>-->
+    </section>
+
+    <section id="developer">
+      <div id="button-box">
+        <button class="skill-buttons align-left margin-header">
+          Experiences
+        </button>
+      </div>
+      <div id="dv-box">
+        <h2>
+          <span class="blue-color">Work History</span>
+        </h2>
+      </div>
+      <div class="content-box grey-color">
+        <h2>
+          Code What I Design
+        </h2>
+        <article>
+          I love designing websites and apps, and turning it into something fascinating using codes.
+          I have achieved many skills that helped me through this process.
+        </article>
+      </div>
+
+      <!-- <div  id = "skills-set">
+           <ul id = "icons-set">
+             <li class = "skills-icon"><i class="devicon-html5-plain"></i></li>             
+             <li class = "skills-icon"> <i class="devicon-css3-plain"></i></li>   
+                      
+             <li class = "skills-icon">  <i class="devicon-bootstrap-plain"></i></li>
+             <li class = "skills-icon"><i class="devicon-sass-original"></i></li>
+             <li class = "skills-icon"><i class="devicon-javascript-plain"></i></li>
+             <li class = "skills-icon"><i class="devicon-jquery-plain-wordmark"></i></li>
+             
+             <li class = "skills-icon"><i class="devicon-wordpress-plain"></i></li>
+             <li class = "skills-icon"><i class="devicon-typescript-plain"></i></li>
+             <li class = "skills-icon"> <i class="devicon-java-plain"></i></li>
+             <li class = "skills-icon"><i class="devicon-mysql-plain"></i></li>
+             <li class = "skills-icon"><i class="devicon-php-plain"></i></li>
+             <li class = "skills-icon"><i class="devicon-react-original"></i></li>
+             <li class = "skills-icon"><i class="devicon-git-plain"></i></li>
+             <li class = "skills-icon"><i class="devicon-express-original"></i></li>
+             <li class = "skills-icon"><i class="devicon-d3js-plain"></i></li>
+             <li class = "skills-icon"> <i class="devicon-cplusplus-plain"></i></li>
+             <li class = "skills-icon"><i class="devicon-csharp-plain"></i></li>
+           </ul>
+        </div> -->
+    </section>
+    <section id="projects">
+      <h2>
+        <span class="orange-color">Projects</span>
+      </h2>
+      <div id="proj-cont" class="content-box grey-color">
+        <h2 class=" heading2-small grey-color">
+        Featured Projects
+      </h2>
+      <div id="project-carousel">
+        <div class="content-container">
+          <ul class="project-collection">
+            <li id="project1" class="content-size">
+              <div class="project-box">
+                <span class="header-section">
+                  <div><a href="#" class="carousel-header">VIBE</a></div>
+                  <span class="number-header">01</span>
+                  <p>
+                    Blockchain protocol for distributed ledger system.
+                  </p>
+                </span>
+              </div>
+            </li>
+            <li id="project2" class="content-size">
+              <div class="project-box">
+                <span class="header-section">
+                  <div><a href="#" class="carousel-header">PRIDE</a></div>
+                  <span class="number-header">02</span>
+                  <p>Programming language written for fun and learning. Compiler is created
+                    using C++ and runs on top of LLVM.
+                  </p>
+                </span>
+              </div>
+            </li>
+            <!-- <li id = "project3" class="content-size">
+              <div class = "project-box">
+                <span class = "header-section">
+                  <span class = "number-header">03</span>
+                  <div class = "carousel-header">ALGORITHM <br> PATH</div>
+                  <p>
+                    Visualising path finding algorithms. Work in progress.
+                  </p>
+                </span>
+              </div>
+            </li>   
+            <li id = "project4" class="content-size">
+              <div class = "project-box">
+                <span class = "header-section">
+                  <span class = "number-header">04</span>
+                  <div class = "carousel-header">ALGORITHM <br> DATA</div>
+                  <p>
+                    Visualising sorting algorithms using PIL. 
+                  </p>
+                </span>
+              </div>
+            </li>                -->
+          </ul>
+        </div>
+        <div>
+          <div id="slider">
+            <div id="layout-change">
+            </div>
+            <div id="slider-buttons">
+              <button class="prev-next-button previous">&#8249;</button>
+              <button class="prev-next-button next">&#8250;</button>
+            </div>
+            <div id="slider-Pbar">
+
+            </div>
+          </div>
+        </div>
+      </div>
+        <h2 class="heading2-small">
+          Current Projects
+        </h2>
+        <article>
+          Currently I'm learning and working on stuffs related to blockchain, programming
+          languages, and system design.
+          <br>
+          <br>
+          These projects are mostly based on my own personal interests and I don't know if i will ever end up completing
+          it.
+        </article>
+      </div>
+
+      <div id="show-projects">
+        <!-- <button class="expand">&rarr;</button> -->
+        <br>
+        <table class="project-list">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Title</th>
+              <th>Tools & Language</th>
+              <th>Progress</th>
+              <th>Links</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><b>2020</b></td>
+              <td>
+                <span>
+                  <b class="orange-color">Terrain generator</b>
+                  <br>
+                  Procedural generating terrain using marching cube algorithm.
+                </span>
+              </td>
+              <td><i>C++, GLSL and openGL </i></td>
+              <td>Completed</td>
+              <td><a href="https://github.com/AI-Pree/"></a></td>
+            </tr>
+            <tr>
+            <tr>
+              <td><b>2020</b></td>
+              <td>
+                <span>
+                  <b class="orange-color">Sorting algorithms</b>
+                  <br>
+                  Visualising different Sorting algorithms.
+                </span>
+              </td>
+              <td><i>Python</i></td>
+              <td>Completed</td>
+              <td><a href="https://github.com/AI-Pree/PathfindingVizAlgo"></a></td>
+            </tr>
+            <tr>
+
+            <tr>
+              <td><b>2020</b></td>
+              <td>
+                <span>
+                  <b class="orange-color">Pathfinding algorithms</b>
+                  <br>
+                  Visualising Pathfinding algorithms in the web and interacting
+                  with the path components.
+                </span>
+              </td>
+              <td><i>Javascript, CSS and HTML </i></td>
+              <td>Completed</td>
+              <td><a href="https://github.com/AI-Pree/PathfindingVizAlgo"></a></td>
+            </tr>
+            <tr>
+              <td><b>2021</b></td>
+              <td>
+                <span>
+                  <b class="orange-color">Resume Data Matrix</b>
+                  <br>
+                  Generate QR codes for sharing your portfolios
+                  and other information in your github profile.
+                </span>
+              </td>
+              <td><i>Python and Vercel </i></td>
+              <td>Completed</td>
+              <td><a href="https://github.com/AI-Pree/Pride"></a></td>
+            </tr>
+            <tr>
+              <td><b>2021</b></td>
+              <td>
+                <span>
+                  <b class="orange-color">Mandlebrot</b>
+                  <br>
+                  Rendering Mandlebrot set using openGL.
+                </span>
+              </td>
+              <td><i>C, C++ and GLSL </i></td>
+              <td>Completed</td>
+              <td><a href="https://github.com/AI-Pree/Pride"></a></td>
+            </tr>
+            <tr>
+              <td><b>2021</b></td>
+              <td>
+                <span>
+                  <b class="orange-color">TimeIt</b>
+                  <br>
+                  Performance profiler for applicaitons.
+                </span>
+              </td>
+              <td><i>Go, Protobuff, Grpc, C/C++, Javascript, Typescript, React js, HTML and CSS </i></td>
+              <td>On going</td>
+              <td><a href="https://github.com/AI-Pree/Pride"></a></td>
+            </tr>
+            <tr>
+              <td><b>2021</b></td>
+              <td>
+                <span>
+                  <b class="orange-color">Vibe</b>
+                  <br>
+                  Blockchain protocol for a distributed ledger system.
+                </span>
+              </td>
+              <td><i>Go</i></td>
+              <td>On going</td>
+              <td><a href="https://github.com/AI-Pree/Vibe"></a></td>
+            </tr>
+            <tr>
+              <td><b>2021</b></td>
+              <td>
+                <span>
+                  <b class="orange-color">MMO server</b>
+                  <br>
+                  Server for 2D indie games.
+                </span>
+              </td>
+              <td><i>Go, Elixir and Erlang</i></td>
+              <td>On going</td>
+              <td><a href="https://github.com/AI-Pree/Vibe"></a></td>
+            </tr>
+            <tr>
+              <td><b>2021</b></td>
+              <td>
+                <span>
+                  <b class="orange-color">Pride</b>
+                  <br>
+                  Programming language written for fun and learning.
+                </span>
+              </td>
+              <td><i>C++</i></td>
+              <td>On going</td>
+              <td><a href="https://github.com/AI-Pree/Pride"></a></td>
+            </tr>
+            <tr>
+              <td><b>2021</b></td>
+              <td>
+                <span>
+                  <b class="orange-color">ConnectUp</b>
+                  <br>
+                  Providing interface for the application to communicate with the linux kernels.
+                </span>
+              </td>
+              <td><i>Go, Grpc, Protobuff</i></td>
+              <td>On going</td>
+              <td><a href="https://github.com/AI-Pree/Pride"></a></td>
+            </tr>
+            <tr>
+              <td><b>2021</b></td>
+              <td>
+                <span>
+                  <b class="orange-color">Small World</b>
+                  <br>
+                  Generation of overworlds and landscape.
+                </span>
+              </td>
+              <td><i>C++, Vulkan</i></td>
+              <td>On going</td>
+              <td><a href="https://github.com/AI-Pree/Pride"></a></td>
+            </tr>
+            <tr>
+              <td><b>2021</b></td>
+              <td>
+                <span>
+                  <b class="orange-color">3D Face procedural generations</b>
+                  <br>
+                  Procedural generation of 3D face
+                </span>
+              </td>
+              <td><i>Rust</i></td>
+              <td>On going</td>
+              <td><a href="https://github.com/AI-Pree/Pride"></a></td>
+            </tr>            
+          </tbody>
+        </table>
+        <!-- <div id = "project-archive">
+          <h2>
+            Project History
+          </h2>
+        </div> -->
+      </div>
+      <div id = "footer">
+        <a href = "animation.html">
+          Testing
+        </a>
+        <a href = "#">
+          Designed and Coded by Me
+        </a>
+      </div>
+      
+    </section>
+
+    <!-- <section id = "contacts">        
+        <h1>
+          <span class = "green-color">CONTACT</span>
+        </h1>
+        <div class = "content-box grey-color">     
+        </div>
+      </section>   -->
+  </div>
+  <!-- <footer>
+    <span class = "marquee">
+      <p>
+        "The only way to learn a new programming language is by writing programs in it."
+      </p>
+    </span>
+  </footer> -->
+</body>
+<script>
+  $(".toggle-icon").click(function () {
+    $('nav').toggleClass("pushed")
+    $('#sideNav').toggleClass("pushSide-in")
+    // $("#sideNav-content").fadeToggle("slow")
+    $("#smallNav").slideToggle(200)
+    $('body').toggleClass("stop-scroll")
+  });
+
+  setTimeout(function () {
+    $('.line').addClass("display-line");
+  }, 800);
+
+  $('#animate-head').addClass("animated fadeIn");
+  $('#hi').addClass("animated bounceIn");
+
+  let getTo = () => {
+    $('nav').removeClass("pushed");
+    $('#sideNav').removeClass("pushSide-in");
+    $('#sideNav-content').fadeOut();
+    $('#smallNav').slideUp(200);
+    $('body').removeClass("stop-scroll");
+  };
+
+
+  // uncomment after wards
+  // $('html, body').animate({
+  //   scrollTop:$("header").offset().top
+  // },1)
+
+  $("#develop").click(function () {
+    getTo();
+    $('html,body').animate({
+      scrollTop: $("#developer").offset().top - 30
+    }, 800);
+  });
+
+  $("#design").click(function () {
+    getTo();
+    $('html,body').animate({
+      scrollTop: $("#designer").offset().top - 30
+    }, 800);
+  });
+
+  $("#project").click(function () {
+    getTo();
+    $('html,body').animate({
+      scrollTop: $("#projects").offset().top - 30
+    }, 800);
+  });
+
+  // $("#contact").click(function () {
+  //   getTo();
+  //   $('html,body').animate({
+  //     scrollTop: $("#contacts").offset().top - 30
+  //   }, 800);
+  // });
+
+
+  $("#grey-box").click(function () {
+    $('html, body').animate({
+      scrollTop: $("header").offset().top
+    }, 800);
+  });
+
+  $("#red-box").click(function () {
+    $('html,body').animate({
+      scrollTop: $("#designer").offset().top - 30
+    }, 800);
+  });
+
+  $("#blue-box").click(function () {
+    $('html,body').animate({
+      scrollTop: $("#developer").offset().top - 30
+    }, 800);
+  });
+
+  $("#orange-box").click(function () {
+    $('html,body').animate({
+      scrollTop: $("#projects").offset().top - 30
+    }, 800);
+  });
+
+  //  $("#green-box").click(function () {
+  //   $('html,body').animate({
+  //      scrollTop: $("#contacts").offset().top - 30
+  //    }, 800);
+  //  });
+</script>
+
+</html>
+
+<!-- 
+<li>
+    <span class = "content-box grey-color">
+        <h2>  
+          Creativity
+        </h2>
+        <article>         
+          Prototyping is the most essestial phase in creating websites. Mostly the prototyping start with the rough mock ups. After that mockups are changed to wireframes, based on the
+          requirements changes.After that, the final design is implemented.
+        </article>        
+    </span>
+</li>
+<li>
+    <span class = "content-box grey-color">
+        <h2>  
+          SEO
+        </h2>
+        <article>         
+          Prototyping is the most essestial phase in creating websites. Mostly the prototyping start with the rough mock ups. After that mockups are changed to wireframes, based on the
+          requirements changes.After that, the final design is implemented.
+        </article>        
+    </span>
+</li>
+<li>
+    <span class = "content-box grey-color">
+        <h2>  
+          Visual Design
+        </h2>
+        <article>         
+          Prototyping is the most essestial phase in creating websites. Mostly the prototyping start with the rough mock ups. After that mockups are changed to wireframes, based on the
+          requirements changes.After that, the final design is implemented.
+        </article>        
+    </span>
+</li> -->
