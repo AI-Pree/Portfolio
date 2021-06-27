@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>3d Animation models</title>
+		<style>
+			body { margin: 0; }
+		</style>
+	</head>
+	<body>
+
+		<p> im trying to render somethings</p>
+		<canvas id = "test"></canvas>
+		
+		<a href = "./js/test.html"> click me </a>
+		<script src="./js/three.js"></script>
+		<script type="module">
+
+			const fov = 40;
+			const aspect = window.innerWidth/window.innerHeight;
+			const near = 0.1;
+			const far  = 1000;
+			
+			const scene = new THREE.Scene();
+			const camera = new THREE.PerspectiveCamera( fov, aspect, near, far);
+
+			// adding lightning
+			const color = 0xFFFFFF;
+			const intensity = 1;
+			const light = new THREE.DirectionalLight(color, intensity);
+			light.position.set(-1, 2, 4);
+			scene.add(light);
+
+			const renderer = new THREE.WebGLRenderer();
+			renderer.setSize( window.innerWidth/2, window.innerHeight/2);
+			document.body.appendChild( renderer.domElement );
+
+			const geometry = new THREE.BoxGeometry();
+			const material = new THREE.MeshPhongMaterial( { color: 0x00ff00 } );
+			const cube = new THREE.Mesh( geometry, material );
+			scene.add( cube );
+
+			camera.position.z = 5;
+
+			const animate = function () {
+				requestAnimationFrame( animate );
+				cube.rotation.x += 0.02;
+				cube.rotation.y += 0.02;
+				renderer.render( scene, camera );
+			}; 
+
+			animate();
+		</script>
+	</body>
+</html>
