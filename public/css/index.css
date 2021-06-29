@@ -425,7 +425,7 @@ article {
 
 /* #proj-cont {
   background-color: var(--orange);
-  color:white;
+  color:white1
 } */
 
 .content-box{
@@ -434,6 +434,13 @@ article {
  */
   width: 400px;;
   xpadding:40px;
+}
+.content-box-med{
+  /* display:grid;
+  grid-template-columns:minmax(auto,600px); 
+ */
+  width: 300px;
+  margin-right:150px;
 }
 
 .list-icons{

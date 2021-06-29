@@ -3,26 +3,53 @@
 	<head>
 		<meta charset="utf-8">
 		<title>3d Animation models</title>
-		<style>
-			body { margin: 0; }
-		</style>
+		
+		<link rel="stylesheet" href ="./css/animation.css">
+		<link rel="stylesheet" href = "./css/index.css">
 	</head>
 	<body>
+		<div class="nav"></div>
+		<div class="container-animation">
+			<header>
+				<h3>
+					<span class ="white-text"> 3D MODELS</span>
+				</h3>
+				<h1 class ="model">
+				  <span class="white-text">CUBE<br /></span>
+				</h1>
+				
+				<div class="content-box-med grey-color">
+				  <div class ="white-text">
+					<article class ="small-font">
+					  Added this cube to get a knowledge on using three.js framework works. This helped me showcase my other models in more refined form.
+					</article>
+				  </div>
+		  
+		  
+		  
+				  <!--         <h2>
+					I'm . A UI/UX<span class = "red-color"> Designer</span> and a Front-end <span class = "red-color">Developer</span>.
+				  </h2> -->
+			  </header>
+			<canvas id = "models"></canvas>
+		</div>
 
-		<p> im trying to render somethings</p>
-		<canvas id = "test"></canvas>
 		
-		<a href = "./js/test.html"> click me </a>
+		<div class="footer"></div>
 		<script src="./js/three.js"></script>
-		<script type ="module" src = "./js/animation.js"></script>
+		<scrip type = "module" src = "./js/animation.js"></scrip>
 		<script type="module" >
+			const canvas = document.querySelector("#models");
 
-			const fov = 40;
-			const aspect = window.innerWidth/window.innerHeight;
+			const fov = 25;
+			const aspect = canvas.clientWidth/canvas.clientHeight;
 			const near = 0.1;
 			const far  = 1000;
-			
+
+			//setting the color for the scene
 			const scene = new THREE.Scene();
+			scene.background = new THREE.Color(0x001233);			
+			
 			const camera = new THREE.PerspectiveCamera( fov, aspect, near, far);
 
 			// adding lightning
@@ -32,9 +59,10 @@
 			light.position.set(-1, 2, 4);
 			scene.add(light);
 
-			const renderer = new THREE.WebGLRenderer();
-			renderer.setSize( window.innerWidth/2, window.innerHeight/2);
-			document.body.appendChild( renderer.domElement );
+			// pass the canvas to the renderer
+			const renderer = new THREE.WebGLRenderer({canvas});
+			renderer.setSize( canvas.clientWidth, canvas.clientHeight);
+			//document.body.appendChild( renderer.domElement );
 
 			const geometry = new THREE.BoxGeometry();
 			const material = new THREE.MeshPhongMaterial( { color: 0x00ff00 } );
@@ -45,12 +73,12 @@
 
 			const animate = function () {
 				requestAnimationFrame( animate );
-				cube.rotation.x += 0.02;
-				cube.rotation.y += 0.02;
+				cube.rotation.x += 0.01;
+				cube.rotation.y += 0.01;
 				renderer.render( scene, camera );
 			}; 
 
-			//animate();
+			animate();
 		</script>
 	</body>
 </html>
