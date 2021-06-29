@@ -1,14 +1,14 @@
 const express = require("express");
 const app = express();
-
+const path = require("path");
 /* running on local host */
 const PORT = 5000;
 
 // serving static files
 
-app.use('/public', express.static(__dirname + '/public'));
+app.use('/public', express.static(path.resolve(__dirname , "public")));
 
-app.get('/', (req, res) => {
+app.get('/*', (req, res) => {
     res.sendFile(__dirname + '/index.html');
 });
 

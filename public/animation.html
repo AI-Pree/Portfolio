@@ -3,49 +3,112 @@
 	<head>
 		<meta charset="utf-8">
 		<title>3d Animation models</title>
-		<style>
-			body { margin: 0; }
-		</style>
+		
+		<link rel="stylesheet" href ="./css/animation.css">
+		<link rel="stylesheet" href = "./css/index.css">
 	</head>
 	<body>
+		<div class="nav"></div>
+		<div class="container-animation">
+			<header>
+				<h3>
+					<span class ="white-text"> 3D MODELS</span>
+				</h3>
+				<h1 class ="model">
+				  <span class="blueish-text">CUBE<br /></span>
+				</h1>
+				
+				<div class="content-box-med grey-color">
+				  <div class ="white-text">
+					<article class ="small-font">
+					  Added this cube to learn about three.js and its inner workings. This helped me showcase my other models in more refined form.
+					   For instance, setting light intensity, ambient occlusion to make my model more appealing.
+					</article>
+					<p></p>
+					<article class="small-font">
+						Most the models added to this archive has story behind building it.
+					</article>
 
-		<p> im trying to render somethings</p>
-		<canvas id = "test"></canvas>
+				  </div>
+		  
+		  
+		  
+				  <!--         <h2>
+					I'm . A UI/UX<span class = "red-color"> Designer</span> and a Front-end <span class = "red-color">Developer</span>.
+				  </h2> -->
+			  </header>
+			<canvas id = "models"></canvas>
+		</div>
+
 		
-		<a href = "./js/test.html"> click me </a>
+		<div class="footer"></div>
 		<script src="./js/three.js"></script>
-		<script type="module">
+		<script src="./js/orbitControl.js"></script>
+		<script type = "module" src = "./js/animation.js"></script>
+		<script>
+			let camera, renderer, scene, controls;		
+			const canvas = document.querySelector("#models");
 
-			const fov = 40;
-			const aspect = window.innerWidth/window.innerHeight;
+			const fov = 25;
+			const aspect = canvas.clientWidth/canvas.clientHeight;
 			const near = 0.1;
 			const far  = 1000;
+
+			//setting the color for the scene
+			scene = new THREE.Scene();
+			scene.background = new THREE.Color(0x001233);			
 			
-			const scene = new THREE.Scene();
-			const camera = new THREE.PerspectiveCamera( fov, aspect, near, far);
+			camera = new THREE.PerspectiveCamera( fov, aspect, near, far);
 
 			// adding lightning
 			const color = 0xFFFFFF;
 			const intensity = 1;
 			const light = new THREE.DirectionalLight(color, intensity);
 			light.position.set(-1, 2, 4);
-			scene.add(light);
 
-			const renderer = new THREE.WebGLRenderer();
-			renderer.setSize( window.innerWidth/2, window.innerHeight/2);
-			document.body.appendChild( renderer.domElement );
+			// added camera in the scene to change the
+			// direction of the light respective to the
+			// orbit control values
+			scene.add(camera);
+			camera.add(light);
 
-			const geometry = new THREE.BoxGeometry();
-			const material = new THREE.MeshPhongMaterial( { color: 0x00ff00 } );
-			const cube = new THREE.Mesh( geometry, material );
-			scene.add( cube );
+			// pass the canvas to the renderer
+			renderer = new THREE.WebGLRenderer({canvas});
+			renderer.setSize( canvas.clientWidth, canvas.clientHeight);
+			//document.body.appendChild( renderer.domElement );
 
-			camera.position.z = 5;
+
+			const size = 1;
+			const widthSegments = 2;
+			const heightSegments = 2;
+			const depthSegments = 2;
+			const boxGeometry = new THREE.BoxGeometry(
+				size, size, size,
+				widthSegments, heightSegments, depthSegments);
+			const geometry = new THREE.EdgesGeometry(boxGeometry);
+
+			//const geometry = new THREE.BoxGeometry();			
+			//const material = new THREE.MeshPhongMaterial( { color: 0x00ff00 } );
+			//const cube = new THREE.Mesh( geometry, material );
+			const line = new THREE.LineSegments( geometry, new THREE.LineBasicMaterial( { color: 0x0353a4} ) );
+			scene.add( line );
+
+			camera.position.set(0, 0, 5)
+			
+
+			// orbit controller for the model
+			controls = new THREE.OrbitControls(camera, canvas);
+			//changes to the controler
+			controls.autoRotate = true;
+			controls.maxDistance = 7;
+			controls.minDistance = 5;
+			controls.update();
 
 			const animate = function () {
 				requestAnimationFrame( animate );
-				cube.rotation.x += 0.02;
-				cube.rotation.y += 0.02;
+				controls.update();	
+				// cube.rotation.x += 0.01;
+				// cube.rotation.y += 0.01;		
 				renderer.render( scene, camera );
 			}; 
 
