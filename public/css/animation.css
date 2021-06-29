@@ -5,10 +5,23 @@
     --orange:#68217a!important;
     --sky:#4cc9f0;
     --gray: ##5a5a5a;
+    --redish: #f9844a;
+    --blueish: #90e0ef;
   }
 
 .white-text {
     color: #fff;
+}
+
+.blueish-text {
+    color: var(--blueish);
+}
+
+.orange-text {
+    color: var(--redish);
+}
+.teal-text {
+    color : #00f5d4;
 }
 .blue-text {
     color: #0466c8;

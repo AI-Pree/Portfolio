@@ -28,4 +28,4 @@ const router = async() => {
 
 document.addEventListener("DOMContentLoaded", () =>{
     router();
-});g
+});

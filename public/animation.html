@@ -15,14 +15,20 @@
 					<span class ="white-text"> 3D MODELS</span>
 				</h3>
 				<h1 class ="model">
-				  <span class="white-text">CUBE<br /></span>
+				  <span class="blueish-text">CUBE<br /></span>
 				</h1>
 				
 				<div class="content-box-med grey-color">
 				  <div class ="white-text">
 					<article class ="small-font">
-					  Added this cube to get a knowledge on using three.js framework works. This helped me showcase my other models in more refined form.
+					  Added this cube to learn about three.js and its inner workings. This helped me showcase my other models in more refined form.
+					   For instance, setting light intensity, ambient occlusion to make my model more appealing.
 					</article>
+					<p></p>
+					<article class="small-font">
+						Most the models added to this archive has story behind building it.
+					</article>
+
 				  </div>
 		  
 		  
@@ -37,8 +43,10 @@
 		
 		<div class="footer"></div>
 		<script src="./js/three.js"></script>
-		<scrip type = "module" src = "./js/animation.js"></scrip>
-		<script type="module" >
+		<script src="./js/orbitControl.js"></script>
+		<script type = "module" src = "./js/animation.js"></script>
+		<script>
+			let camera, renderer, scene, controls;		
 			const canvas = document.querySelector("#models");
 
 			const fov = 25;
@@ -47,34 +55,60 @@
 			const far  = 1000;
 
 			//setting the color for the scene
-			const scene = new THREE.Scene();
+			scene = new THREE.Scene();
 			scene.background = new THREE.Color(0x001233);			
 			
-			const camera = new THREE.PerspectiveCamera( fov, aspect, near, far);
+			camera = new THREE.PerspectiveCamera( fov, aspect, near, far);
 
 			// adding lightning
 			const color = 0xFFFFFF;
 			const intensity = 1;
 			const light = new THREE.DirectionalLight(color, intensity);
 			light.position.set(-1, 2, 4);
-			scene.add(light);
+
+			// added camera in the scene to change the
+			// direction of the light respective to the
+			// orbit control values
+			scene.add(camera);
+			camera.add(light);
 
 			// pass the canvas to the renderer
-			const renderer = new THREE.WebGLRenderer({canvas});
+			renderer = new THREE.WebGLRenderer({canvas});
 			renderer.setSize( canvas.clientWidth, canvas.clientHeight);
 			//document.body.appendChild( renderer.domElement );
 
-			const geometry = new THREE.BoxGeometry();
-			const material = new THREE.MeshPhongMaterial( { color: 0x00ff00 } );
-			const cube = new THREE.Mesh( geometry, material );
-			scene.add( cube );
 
-			camera.position.z = 5;
+			const size = 1;
+			const widthSegments = 2;
+			const heightSegments = 2;
+			const depthSegments = 2;
+			const boxGeometry = new THREE.BoxGeometry(
+				size, size, size,
+				widthSegments, heightSegments, depthSegments);
+			const geometry = new THREE.EdgesGeometry(boxGeometry);
+
+			//const geometry = new THREE.BoxGeometry();			
+			//const material = new THREE.MeshPhongMaterial( { color: 0x00ff00 } );
+			//const cube = new THREE.Mesh( geometry, material );
+			const line = new THREE.LineSegments( geometry, new THREE.LineBasicMaterial( { color: 0x0353a4} ) );
+			scene.add( line );
+
+			camera.position.set(0, 0, 5)
+			
+
+			// orbit controller for the model
+			controls = new THREE.OrbitControls(camera, canvas);
+			//changes to the controler
+			controls.autoRotate = true;
+			controls.maxDistance = 7;
+			controls.minDistance = 5;
+			controls.update();
 
 			const animate = function () {
 				requestAnimationFrame( animate );
-				cube.rotation.x += 0.01;
-				cube.rotation.y += 0.01;
+				controls.update();	
+				// cube.rotation.x += 0.01;
+				// cube.rotation.y += 0.01;		
 				renderer.render( scene, camera );
 			}; 
 
