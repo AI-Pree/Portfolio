@@ -30,12 +30,14 @@
 body {
     margin:0;
     background-color: #001233;
+    min-height:100vh;
 }
 
 .container-animation {
     display: flex;
     align-items: center;
     justify-content: center;
+    height:100vh;
 }
 
 h1.model {
@@ -57,3 +59,27 @@ h1.model {
     height: 400px;
     width: 400px;
 }
+
+.buttons{
+    xcontent: "►";
+    color:#fff;
+    background-color: #d1173d;
+    font-size: 11px;
+    line-height: 12px;
+    padding-right:2px;
+    display:inline-flex;
+    margin-top:20px;
+    margin-left:10px;
+    padding:12px;
+    font-weight:800;
+    box-shadow: 2px 2px 5px #000;
+ }
+
+ .buttons:hover{
+     background-color:var(--red);
+ }
+
+ .symbols{
+     font-size:13px;
+     margin-left:5px;
+ }
