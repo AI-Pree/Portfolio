@@ -8,6 +8,7 @@
   --grey:#5a5a5a;
   --blue:#002f6c!important;
   --orange:#68217a!important;
+  --light-grey:#e5e5e5;
 }
 
 
@@ -194,7 +195,7 @@ article {
   height:100vh;
   display:grid;
   grid-template-columns:100px 5fr 1fr;
-  grid-template-rows:100% 100% 100% auto ;
+  grid-template-rows:100% auto 100% auto ;
   grid-gap:0px 50px;
   grid-template-areas:
   'nav head snav'
@@ -296,6 +297,7 @@ article {
   box-shadow: 1px 5px 7px #888888;
 }
 .grid #designer {
+ 
   width:auto;
   height:auto;
   grid-area:desg;
@@ -432,7 +434,7 @@ article {
   /* display:grid;
   grid-template-columns:minmax(auto,600px); 
  */
-  width: 400px;;
+  width: 400px;
   xpadding:40px;
 }
 .content-box-med{
@@ -964,3 +966,62 @@ ul.skills li:hover {
 li:active .language {
   display:block;
 } */
+
+/* fixing the svg size */
+.fix-size {
+  width:50px;
+  height:50px;
+
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.icon-container li {
+  margin:20px;
+}
+
+/* fml for doing it this way */
+/* changing the color of each icon */
+
+.grey-fill {
+  fill:var(--light-grey);
+}
+
+/* git */
+#git:hover {
+  fill: #F34F29;
+} 
+
+/* heroku color */
+#heroku:hover{
+  fill: #6762A6;
+}
+
+/* jenkins */
+#jenkins:hover{
+
+}
+
+/* mongod */
+#mongod:hover{
+  fill:#439934;
+}
+/* mysql */
+#mysql:hover{
+  fill:#00618A;
+}
+/* nginx */
+#nginx:hover{
+  fill:#090;
+}
+/* posgresql */
+/* redis */
+/* trello */
+/* webpack */
+/* amazon-services */
+/* codcov */
