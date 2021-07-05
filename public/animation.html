@@ -10,31 +10,71 @@
 	<body>
 		<div class="nav"></div>
 		<div class="container-animation">
-			<header>
-				<h3>
-					<span class ="white-text"> 3D MODELS</span>
-				</h3>
-				<h1 class ="model">
-				  <span class="blueish-text">CUBE<br /></span>
-				</h1>
-				
-				<div class="content-box-med grey-color">
-					<div class ="white-text">
-						<article class ="small-font">
-						Added this cube to learn about three.js and its inner workings. This helped me showcase my other models in more refined form.
-						For instance, setting light intensity, ambient occlusion to make my model more appealing.
-						</article>
-						<p></p>
-						<article class="small-font">
-							Most of the models added to this archive has story behind building it.
-						</article>
-				  	</div>
-					<a class = "buttons" href = "#">MORE <span class ="symbols">►</span></a>
-					
-				</div>
-			</header>
-					
-			<canvas id = "models"></canvas>
+			<ul>
+				<li class = "model-list">
+					<header>
+						<h3>
+							<span class ="white-text"> 3D MODELS</span>
+						</h3>
+						<h1 class ="model">
+						  <span class="blueish-text">CUBE<br /></span>
+						</h1>
+						
+						<div class="content-box-med grey-color">
+							<div class ="white-text">
+								<article class ="small-font">
+								Added this cube to learn about three.js and its inner workings. This helped me showcase my other models in more refined form.
+								For instance, setting light intensity, ambient occlusion to make my model more appealing.
+								</article>
+								<p></p>
+								<article class="small-font">
+									Most of the models added to this archive was built mostly for fun.
+								</article>
+							  </div>
+							<a class = "buttons" href = "#">MORE <span class ="symbols">►</span></a>
+							
+						</div>
+					</header>							
+					<canvas id = "models"></canvas>
+				</li>
+				<!-- <li class = "model-list">
+					<header>
+						<h3>
+							<span class ="white-text"> 3D MODELS</span>
+						</h3>
+						<h1 class ="model">
+						  <span class="blueish-text">CUBE<br /></span>
+						</h1>
+						
+						<div class="content-box-med grey-color">
+							<div class ="white-text">
+								<ul class = "col-article">
+									<li>
+										<article class = "focused-col small-font">
+											Beach house created in blender.
+										</article>
+									</li>
+									<li>
+										<article class ="small-font">
+											Added this cube to learn about three.js and its inner workings. This helped me showcase my other models in more refined form.
+											For instance, setting light intensity, ambient occlusion to make my model more appealing.
+											</article>
+											<p></p>
+											<article class="small-font">
+												Most of the models added to this archive was built mostly for fun.
+											</article>
+									</li>
+								</ul>							
+								
+							  </div>
+							<a class = "buttons" href = "#">MORE <span class ="symbols">►</span></a>
+							
+						</div>
+					</header>
+					<canvas id = "models"></canvas>
+				</li> -->
+			</ul>
+			
 			<!-- <div id = "cube"></div>	 -->
 		</div>
 
@@ -43,12 +83,15 @@
 		<script src="./js/three.js"></script>
 		<script src="./js/orbitControl.js"></script>
 		<script type = "module" src = "./js/animation.js"></script>
+		<script src = "./js/GLTFLoader.js"></script>
+		<script src = "./js/ObjectLoader.js"></script>
+		
 		<script>
 
 			let renderer;
 			// pass the canvas to the renderer
 			const canvas = document.querySelector("#models");
-			renderer = new THREE.WebGLRenderer({canvas});
+			renderer = new THREE.WebGLRenderer({canvas, alpha:true});
 
 			/**
 			 * This function creates the scene and assign camera
@@ -56,8 +99,8 @@
 			 **/
 			function makeScene(elem) {
 				const scene = new THREE.Scene();
-				scene.background = new THREE.Color(0x001233);
-				const fov = 25;
+				//scene.background = new THREE.Color(0x001233);
+				const fov = 75;
 				const aspect = elem.clientWidth/elem.clientHeight;
 				const near = 0.1;
 				const far  = 1000;
@@ -119,10 +162,30 @@
 				return sceneInfo;
 			}
 
-			// list of setup scenes
-			const sceneInfo1 = setupScene1();
-			const controls1 = orbitController(sceneInfo1.camera, sceneInfo1.elem);
+			function setupScene2() {
+				const sceneInfo = makeScene(document.querySelector('#models'));
+				const loader = new THREE.OBJLoader();
+				loader.load('./model/Five_Wheeler-(Wavefront OBJ).obj', function(obj) {
+					//adding the loaded object to the scene
+					sceneInfo.scene.add(obj);
+				}, 
 				
+				//onProgress Callback
+				function(xhr) {
+					console.log((xhr.loaded / xhr.total * 100) + '% loaded');
+				}
+				, function(error){
+					console.error(error);
+				});
+
+				return sceneInfo;
+			}
+
+			// list of setup scenes
+			//const sceneInfo1 = setupScene1();
+			const sceneInfo2 = setupScene2();
+			//const controls1 = orbitController(sceneInfo1.camera, sceneInfo1.elem);
+			const controls2 = orbitController(sceneInfo2.camera, sceneInfo2.elem);
 			
 			//document.body.appendChild( renderer.domElement );
 			
@@ -141,9 +204,9 @@
 			 * inside the scene.
 			 **/
 			function render(){			
-				controls1.update();
+				controls2.update();
 				requestAnimationFrame( render );
-				renderSceneInfo(sceneInfo1);
+				renderSceneInfo(sceneInfo2);
 			}
 
 			render();
