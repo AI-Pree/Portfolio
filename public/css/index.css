@@ -969,20 +969,25 @@ li:active .language {
 
 /* fixing the svg size */
 .fix-size {
-  width:50px;
-  height:50px;
+  width:30px;
+  height:30px;
 
 }
 
+.skills-icon {
+  display:flex;
+
+}
 .icon-container {
   display: flex;
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
+  padding:0px;
 }
 
 .icon-container li {
-  margin:20px;
+  margin:10px;
 }
 
 /* fml for doing it this way */
