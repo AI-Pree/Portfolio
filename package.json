@@ -22,21 +22,23 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "flow": "flow",
-    "lint": "eslint .",
-    "format": "prettier --write \"**/*.+(js|jsx|json|yml|yaml|css|md|tsx)\""
+    "flow": "flow"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
+      "react-app/jest",
+      "plugin:prettier/recommended"
     ]
   },
-  {
-  	"husky": {
-		"hooks": {
-			"pre-commit": "npm run flow && npm run lint && npm run format"
-		}
+  "prettier": {
+    "printWidth": 90,
+    "bracketSpacing": false,
+    "trailingComma": "es5"
+  },
+  "husky": {
+  	"hooks": {
+		"pre-commit": "npm run flow && lint-staged"
 	}
   },
   "browserslist": {
@@ -53,7 +55,10 @@
   },
   "devDependencies": {
     "eslint": "^7.31.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
     "husky": "^7.0.1",
+    "lint-staged": "^11.1.1",
     "prettier": "^2.3.2"
   }
 }
