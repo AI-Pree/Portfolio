@@ -8,7 +8,7 @@ TO DO:
 - [ ] adding code formatter, linters, prettify for pre commits (just following some software engineering norms)
 - [ ] Re-writing the whole code base in react-js
 - [ ] Use templates
-- [ ] create json file to store data
+- [ ] create json file to store data (or protobuff -> Reminder: ditch the idea if the implementation is overly complicated )
 - [ ] Make the webstie responsive for both mobile(dont want to but ...) and web
 - [ ] Structure the file
 - [ ] Add a docker (not necessary), but hey its in mainstream!! people run hello world code in docker nowadays..
