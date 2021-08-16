@@ -1,5 +1,6 @@
 export const projects = [
     {
+        "id":1,
         "date":"2021",
         "title": "RISC-V core",
         "language":"Verilog",
@@ -10,6 +11,7 @@ export const projects = [
         "details":"",
     },
     {
+        "id":2,
         "date":"2021",
         "title": "Fun-SLAM",
         "language":"Julia",
@@ -20,6 +22,18 @@ export const projects = [
         "details":"",
     },
     {
+        "id":3,
+        "date":"2021",
+        "title": "Small-World",
+        "language":"C#",
+        "description":"Procedural generation of landscape",
+        "Progress": "",
+        "link": "",
+        "api":"",
+        "details":"",
+    },
+    {
+        "id":4,
         "date":"",
         "title": "",
         "language":"",
@@ -30,6 +44,7 @@ export const projects = [
         "details":"",
     },
     {
+        "id":5,
         "date":"",
         "title": "",
         "language":"",
@@ -40,6 +55,7 @@ export const projects = [
         "details":"",
     },
     {
+        "id":6,
         "date":"",
         "title": "",
         "language":"",
@@ -50,6 +66,7 @@ export const projects = [
         "details":"",
     },
     {
+        "id":7,
         "date":"",
         "title": "",
         "language":"",
@@ -60,6 +77,7 @@ export const projects = [
         "details":"",
     },
     {
+        "id":8,
         "date":"",
         "title": "",
         "language":"",
@@ -70,6 +88,7 @@ export const projects = [
         "details":"",
     },
     {
+        "id":9,
         "date":"",
         "title": "",
         "language":"",
@@ -80,6 +99,7 @@ export const projects = [
         "details":"",
     },
     {
+        "id":10,
         "date":"",
         "title": "",
         "language":"",
@@ -90,6 +110,7 @@ export const projects = [
         "details":"",
     },
     {
+        "id":11,
         "date":"",
         "title": "",
         "language":"",
@@ -100,6 +121,7 @@ export const projects = [
         "details":"",
     },
     {
+        "id":12,
         "date":"",
         "title": "",
         "language":"",
@@ -109,17 +131,4 @@ export const projects = [
         "api":"",
         "details":"",
     },
-    {
-        "date":"",
-        "title": "",
-        "language":"",
-        "description":"",
-        "Progress": "",
-        "link": "",
-        "api":"",
-        "details":"",
-    },
-
-    
-
-]
+];

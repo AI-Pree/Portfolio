@@ -1,19 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {ReactElement} from "react";
+import "./App.css";
 import About from "./components/about";
 import Projects from "./components/projcets";
-import Experience from './components/experience';
-import { projects } from './data/projects';
+import Experience from "./components/experience";
+import Nav from "./components/nav";
 
-function App() {
-  return (
-    <main>
-      <About />
-      <Projects />
-      <Experience />
-    </main>
-  );
+function App(): ReactElement {
+    return (
+        <main>
+            <Nav />
+            <About />
+            <Projects />
+            <Experience />
+        </main>
+    );
 }
 
 export default App;

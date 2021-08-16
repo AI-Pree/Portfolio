@@ -1,11 +1,13 @@
-import React from 'react';
-import {projects} from ".././data/projects"
+import React, {ReactElement} from "react";
+import {projects} from ".././data/projects";
 
-export default function Projects(){
-    return (<div>
-        {projects.map((project)=>{
-            <p>{project.title}</p>
-        })}
-    </div>);
-
+export default function Projects(): ReactElement {
+    return (
+        <div>
+            <h1>Projects</h1>
+            {projects.map((project) => (
+                <p key={project.id}>{project.title}</p>
+            ))}
+        </div>
+    );
 }
