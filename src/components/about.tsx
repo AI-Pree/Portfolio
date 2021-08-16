@@ -3,9 +3,11 @@ import {about} from "../data/about";
 
 export default function About(): ReactElement {
     return (
-        <div>
-            <h1>{about.title}</h1>
-            <p>{about.intro}</p>
+        <section className="designer">
+            <h2>
+                <span className="red-color">{about.title}</span>
+            </h2>
+            <article>{about.intro}</article>
             <ul>
                 {about.languages.map((language) => (
                     <li key={language.id}>
@@ -13,6 +15,6 @@ export default function About(): ReactElement {
                     </li>
                 ))}
             </ul>
-        </div>
+        </section>
     );
 }

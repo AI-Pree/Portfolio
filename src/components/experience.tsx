@@ -3,9 +3,11 @@ import {experience} from "../data/experience";
 
 export default function Experience(): ReactElement {
     return (
-        <div>
-            <h1>{experience.title}</h1>
+        <section className="developer">
+            <h2>
+                <span className="blue-color">{experience.title}</span>
+            </h2>
             <p>{experience.intro}</p>
-        </div>
+        </section>
     );
 }

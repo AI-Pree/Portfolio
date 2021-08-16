@@ -3,11 +3,13 @@ import {projects} from ".././data/projects";
 
 export default function Projects(): ReactElement {
     return (
-        <div>
-            <h1>Projects</h1>
+        <section className="projects">
+            <h2>
+                <span className="orange-color">Projects</span>
+            </h2>
             {projects.map((project) => (
                 <p key={project.id}>{project.title}</p>
             ))}
-        </div>
+        </section>
     );
 }

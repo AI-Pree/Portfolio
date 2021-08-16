@@ -62,5 +62,11 @@ export const about = {
             experience: "",
             skill_level: "4",
         },
+        {
+            id: 10,
+            title: "Erlang & Elixir",
+            experience: "",
+            skill_level: "1",
+        },
     ],
 };
