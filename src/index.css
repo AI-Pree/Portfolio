@@ -13,6 +13,11 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
+/* font */
+.light-bold {
+    font-weight: 400;
+}
+
 /* my logo url */
 .logo {
     font-size: 30px;
@@ -28,6 +33,7 @@ code {
     --grey: #5a5a5a;
     --blue: #002f6c !important;
     --orange: #68217a !important;
+    --greeny: #5a5 !important;
 }
 
 /* 
@@ -101,7 +107,7 @@ a {
 }
 
 p {
-    font-size: 15px;
+    font-size: 13px;
 }
 
 section > a:hover {
@@ -139,6 +145,10 @@ h1 {
 
 .orange-color {
     color: var(--orange) !important;
+}
+
+.green-color {
+    color: var(--greeny) !important;
 }
 
 /* .green-color {
@@ -953,3 +963,19 @@ ul.skills li:hover {
 li:active .language {
   display:block;
 } */
+
+.display-inline {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    line-height: 0;
+    margin-top: 60px;
+}
+
+.day-font {
+    font-size: medium;
+}
