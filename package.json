@@ -37,9 +37,9 @@
     "trailingComma": "es5"
   },
   "husky": {
-  	"hooks": {
-		"pre-commit": "npm run flow && lint-staged"
-	}
+    "hooks": {
+      "pre-commit": "npm run flow && lint-staged"
+    }
   },
   "browserslist": {
     "production": [
@@ -54,11 +54,14 @@
     ]
   },
   "devDependencies": {
+    "autoprefixer": "^9.8.6",
     "eslint": "^7.31.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
     "husky": "^7.0.1",
     "lint-staged": "^11.1.1",
-    "prettier": "^2.3.2"
+    "postcss": "^7.0.36",
+    "prettier": "^2.3.2",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.7"
   }
 }
