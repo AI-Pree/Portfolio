@@ -320,6 +320,7 @@ article {
     align-items: center;
     justify-content: center;
     box-shadow: 1px 5px 7px #888888;
+    z-index: 1000000;
 }
 .grid .designer {
     width: auto;
@@ -711,6 +712,20 @@ li {
     margin-bottom: 50px;
 }
 
+.list-container {
+    width: 280px;
+    margin-bottom: 30px;
+}
+
+.project-ul {
+    /* display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly; */
+    padding: 0px;
+    columns: 20em;
+}
+
 footer {
     position: fixed;
     height: 50px;
@@ -972,8 +987,13 @@ li:active .language {
     justify-content: space-between;
     align-items: center;
     padding: 0px;
-    line-height: 0;
-    margin-top: 60px;
+    line-height: 0.9;
+    margin: 0;
+}
+
+.display-inline h2 {
+    font-size: 30px;
+    margin: 0;
 }
 
 .day-font {

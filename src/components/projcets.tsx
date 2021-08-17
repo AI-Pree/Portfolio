@@ -7,19 +7,19 @@ export default function Projects(): ReactElement {
             <h2>
                 <span className="green-color">Projects</span>
             </h2>
-            <ul>
+            <ul className="project-ul">
                 {projects.map((project) => (
-                    <li key={project.id}>
+                    <li key={project.id} className="list-container animate__animated">
                         <ul className="display-inline">
                             <li>
                                 <h2 className="grey-trans">{project.title}</h2>
                             </li>
-                            <li>
+                            {/* <li>
                                 <h1 className="green-color">
                                     {project.spent}
                                     <span className="day-font grey-trans">days</span>
                                 </h1>
-                            </li>
+                            </li> */}
                         </ul>
                         <p>
                             <span className="light-bold green-color">
