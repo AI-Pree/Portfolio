@@ -1,7 +1,7 @@
 import React, {ReactElement} from "react";
-import {nav} from "../../../data/nav";
+import {nav} from "../../data/nav";
 
-export default function Nav(): ReactElement {
+export default function SideNav(): ReactElement {
     return (
         <div className="grid">
             <nav>

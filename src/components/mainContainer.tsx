@@ -1,12 +1,12 @@
-import React from "react";
+import React, {ReactElement} from "react";
+import {useCallback, useEffect, useMemo} from "react";
 import Header from "./containers/homeContainer/header";
 import About from "./containers/aboutContainer/about";
 import Projects from "./containers/projectContainer/projcets";
 import Experience from "./containers/workContainer/experience";
-import Nav from "./containers/navConainter/nav";
+import SideNav from "./nav/sideNav";
+import NavBar from "./nav/navBar";
 
-export default class MainContainer extends React.Component {
-    render() {
-        return <div className="grid"></div>;
-    }
+export default function MainContainer(): ReactElement {
+    return <div className="grid"></div>;
 }
