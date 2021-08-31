@@ -1,21 +1,9 @@
 import React, {ReactElement} from "react";
 import "./App.css";
-import Header from "./components/header";
-import About from "./components/about";
-import Projects from "./components/projcets";
-import Experience from "./components/experience";
-import Nav from "./components/nav";
+import MainContainer from "./components/mainContainer";
 
 function App(): ReactElement {
-    return (
-        <main className="grid">
-            <Nav />
-            <Header />
-            <About />
-            <Experience />
-            <Projects />
-        </main>
-    );
+    return <MainContainer />;
 }
 
 export default App;
