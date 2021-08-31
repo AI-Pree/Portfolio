@@ -1,5 +1,5 @@
 import React, {ReactElement} from "react";
-import {about} from "../../../data/about";
+import {about} from "../data/about";
 
 export default function About(): ReactElement {
     return (

@@ -221,17 +221,28 @@ article {
 }
 
 /* overall grid layout using flex */
-.grid {
+/* .grid {
     height: 100vh;
     display: grid;
-    grid-template-columns: 100px 5fr 1fr;
-    grid-template-rows: 100% 100% 100% auto;
+    grid-template-columns: 70px 5fr;
+    grid-template-rows: 100%;
     grid-gap: 0px 50px;
     grid-template-areas:
         "nav head ."
         ". desg ."
         ". dev ."
         ". proj .";
+} */
+
+.grid {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 70px 5fr;
+    grid-template-rows: 100px 100%;
+    grid-gap: 0px 0px;
+    grid-template-areas:
+        "navs navb"
+        ". container";
 }
 
 /* side info invisible when not hoverd */
@@ -309,10 +320,10 @@ article {
     align-items: flex-start;
 }
 .grid > nav {
-    grid-area: nav;
+    grid-area: navs;
     background-color: #5a5a5a;
     position: fixed;
-    width: 100px;
+    width: 70px;
     margin: 0;
     height: 100%;
     display: flex;
@@ -322,21 +333,40 @@ article {
     box-shadow: 1px 5px 7px #888888;
     z-index: 1000000;
 }
+
+.grid .navBar {
+    display: flex;
+    margin-top: 0px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    max-width: 100%;
+    justify-content: flex-end;
+    padding: 0px;
+    grid-area: navb;
+}
+
+.grid .container {
+    grid-area: container;
+}
+
+/* 
 .grid .designer {
     width: auto;
     height: auto;
     grid-area: desg;
 
-    /* display:flex;
-  justify-content: center;
-  flex-direction: column; */
-}
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+} */
 
+/* 
 .grid .developer {
     width: auto;
     height: auto;
     grid-area: dev;
-}
+} */
 
 .developer .skills-set {
     width: 100%;

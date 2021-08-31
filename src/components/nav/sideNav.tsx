@@ -18,10 +18,10 @@ export default function SideNav(): ReactElement {
             <div className="sideNav">
                 <div className="sideNav-content">
                     <ul>
-                        {nav[0].contents?.map((content) => (
+                        {nav.contents.map((content) => (
                             <li key={content.id}>
                                 <h2>
-                                    <a className={content.classname}>
+                                    <a className={content.classnameSide}>
                                         {content.title}
                                         <br />
                                     </a>
