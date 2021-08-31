@@ -238,8 +238,8 @@ article {
     height: 100vh;
     display: grid;
     grid-template-columns: 70px 5fr;
-    grid-template-rows: 100px 100%;
-    grid-gap: 0px 0px;
+    grid-template-rows: 100px auto;
+    gap: 0px 50px;
     grid-template-areas:
         "navs navb"
         ". container";
@@ -321,7 +321,7 @@ article {
 }
 .grid > nav {
     grid-area: navs;
-    background-color: #5a5a5a;
+    background-color: rgb(29, 29, 29);
     position: fixed;
     width: 70px;
     margin: 0;
@@ -344,6 +344,8 @@ article {
     justify-content: flex-end;
     padding: 0px;
     grid-area: navb;
+    color: rgb(29, 29, 29);
+    height: 100px;
 }
 
 .grid .container {

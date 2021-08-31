@@ -1,6 +1,6 @@
 import React, {ReactElement} from "react";
 
-export default function Header(): ReactElement {
+export default function Home(): ReactElement {
     return (
         <header>
             <h1 className="hi">

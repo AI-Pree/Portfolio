@@ -59,28 +59,36 @@ export const nav = {
     contents: [
         {
             id: "1",
+            link: "/",
             title: "HOME",
             classnameSide: "design gery-color nav-font",
             classnameBar: "list-navbar",
+            colorClass: "nav-active-grey",
         },
 
         {
             id: "2",
             title: "ABOUT ME",
+            link: "/about",
             classnameSide: "design red-color nav-font",
             classnameBar: "list-navbar",
+            colorClass: "nav-active-red",
         },
         {
             id: "3",
             title: "EXPERIENCE",
+            link: "/experience",
             classnameSide: "develop blue-color nav-font",
             classnameBar: "list-navbar",
+            colorClass: "nav-active-blue",
         },
         {
             id: "4",
             title: "PROJECTS",
+            link: "/projects",
             classnameSide: "project orange-color nav-font",
             classnameBar: "list-navbar",
+            colorClass: "nav-active-green",
         },
     ],
 };

@@ -1,10 +1,10 @@
 /* variables for the colors used in the website */
 :root {
     --red: #e51b43;
-    --grey: #cfcccc;
-    --blue: #002f6c !important;
-    --orange: #68217a !important;
-    --greeny: rgb(102, 218, 102) !important;
+    --grey: rgb(29, 29, 29);
+    --blue: #002f6c;
+    --orange: #68217a;
+    --greeny: rgb(102, 218, 102);
 }
 
 .App {
@@ -47,29 +47,37 @@
 }
 
 /* nav component */
-
 li.list-navbar {
+    display: flex;
+}
+
+li.list-navbar a {
     padding: 50px;
     cursor: pointer;
+    font-family: inherit;
+    color: inherit;
+    font-size: inherit;
 }
 
-li.list-navbar:hover {
-    color: #fff;
-    transition: ease-in-out 300ms;
+li.list-navbar a:hover {
+    color: #656769;
 }
 
-li.list-navbar-green:hover {
-    background: var(--greeny);
-}
-
-li.list-navbar-red:hover {
+.nav-active-red {
     background: var(--red);
+    color: #fff !important;
 }
-
-li.list-navbar-blue:hover {
-    background: var(--blue);
-}
-
-li.list-navbar-grey:hover {
+.nav-active-grey {
     background: var(--grey);
+    color: #fff !important;
+}
+
+.nav-active-green {
+    background: var(--greeny);
+    color: #fff !important;
+}
+
+.nav-active-blue {
+    background: var(--blue);
+    color: #fff !important;
 }

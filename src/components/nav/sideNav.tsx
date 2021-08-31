@@ -1,7 +1,11 @@
 import React, {ReactElement} from "react";
 import {nav} from "../../data/nav";
 
-export default function SideNav(): ReactElement {
+type SideNavProps = {
+    myColor: string;
+};
+
+export default function SideNav({myColor}: SideNavProps): ReactElement {
     return (
         <div className="grid">
             <nav>
@@ -15,7 +19,7 @@ export default function SideNav(): ReactElement {
                 <div className="smallNav"></div>
             </nav>
 
-            <div className="sideNav">
+            <div className={`sideNav ${myColor}`}>
                 <div className="sideNav-content">
                     <ul>
                         {nav.contents.map((content) => (
