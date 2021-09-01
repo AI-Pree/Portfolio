@@ -7,7 +7,7 @@ type SideNavProps = {
 
 export default function SideNav({myColor}: SideNavProps): ReactElement {
     return (
-        <div className="grid">
+        <>
             <nav>
                 <div className="nav-container">
                     <div className="toggle-icon">
@@ -35,6 +35,6 @@ export default function SideNav({myColor}: SideNavProps): ReactElement {
                     </ul>
                 </div>
             </div>
-        </div>
+        </>
     );
 }

@@ -1,6 +1,6 @@
 export const about = {
     title: "About Me",
-    intro: "I love working on projects related to low level machines, cloud (cloud architecture), game development and web application (focus on system architecture of the app) in general.This helped me learn heaps about new technology and tools practiced in IT. Currently, I'm learning about blockchain and system design to broaden my knowledge futher.",
+    intro: "I love working on projects related to low level machines, cloud (cloud architecture), game development and web application (focus on system architecture of the app), blockchain and machine learning.This helped me learn heaps about new technology and tools practiced in IT. Currently, I'm learning about blockchain and system design to broaden my knowledge futher.",
     languages: [
         {
             id: 1,

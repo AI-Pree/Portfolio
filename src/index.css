@@ -30,7 +30,7 @@ code {
 /* variables for the colors used in the website */
 :root {
     --red: #e51b43;
-    --grey: #5a5a5a;
+    --grey: rgb(29, 29, 29);
     --blue: #002f6c !important;
     --orange: #68217a !important;
     --greeny: #5a5 !important;
@@ -117,7 +117,7 @@ section > a:hover {
 
 h1 {
     letter-spacing: 2px;
-    font-size: 80px;
+    font-size: 120px;
 
     /* For gradient text :
   background: -webkit-linear-gradient(#EA384D,#e43a15);
@@ -164,7 +164,7 @@ h1 {
 }
 
 .grey-bg {
-    background-color: rgba(0, 0, 0, 0.1) !important;
+    background-color: var(--grey);
 }
 
 .orange-bg {
@@ -183,7 +183,7 @@ h4 {
     font-size: 25px;
 }
 section {
-    color: #a9a9a9;
+    color: #5a5a5a;
     margin-top: 30px;
 }
 
@@ -312,7 +312,7 @@ article {
   
 } */
 
-.grid > header {
+.grid .header {
     grid-area: head;
     display: flex;
     flex-flow: wrap column;
@@ -346,10 +346,23 @@ article {
     grid-area: navb;
     color: rgb(29, 29, 29);
     height: 100px;
+    border-bottom: 1px solid #ccc;
 }
 
 .grid .container {
     grid-area: container;
+}
+
+.grid .container {
+    grid-area: container;
+}
+
+.grid .homecontainer {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    height: 100%;
 }
 
 /* 
