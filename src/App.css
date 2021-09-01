@@ -1,0 +1,108 @@
+/* variables for the colors used in the website */
+:root {
+    --red: #e51b43;
+    --grey: rgb(29, 29, 29);
+    --blue: #002f6c;
+    --orange: #68217a;
+    --greeny: rgb(102, 218, 102);
+}
+
+.App {
+    text-align: center;
+}
+
+.App-logo {
+    height: 40vmin;
+    pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+
+.App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.App-link {
+    color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* nav component */
+li.list-navbar {
+    display: flex;
+}
+
+li.list-navbar a {
+    padding: 50px;
+    cursor: pointer;
+    font-family: inherit;
+    color: inherit;
+    font-size: inherit;
+    border-left: 1px solid #ccc;
+}
+
+li.list-navbar a:hover {
+    color: #656769;
+}
+
+.nav-active-red {
+    background: var(--red);
+    color: #fff !important;
+}
+.nav-active-grey {
+    background: var(--grey);
+    color: #fff !important;
+}
+
+.nav-active-green {
+    background: var(--greeny);
+    color: #fff !important;
+}
+
+.nav-active-blue {
+    background: var(--blue);
+    color: #fff !important;
+}
+
+/* buttons */
+
+/* buttons for home page */
+.normal-button {
+    padding: 10px;
+    min-width: 200px;
+    cursor: pointer;
+    margin: 30px 0px 30px 0px;
+    color: #fff;
+    border-width: 0px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    border-radius: 3px;
+}
+
+.normal-button:hover {
+    opacity: 0.9;
+}
+
+/* container component */
+
+.article {
+    width: 350px;
+}
