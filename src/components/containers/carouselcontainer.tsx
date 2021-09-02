@@ -1,4 +1,6 @@
 import React, {ReactElement, useState} from "react";
+import NormalButton from "../buttons/normalButton";
+import SliderButton from "../buttons/sliderButton";
 
 export interface ICarouselItem {
     id: number;
@@ -14,15 +16,25 @@ export interface ICarouselItem {
     details: string;
 }
 
-type CarouselData = {
-    item: ICarouselItem;
-};
+// type CarouselData = {
+//     item: ICarouselItem;
+// };
 
 export const CarouselItem = ({children, height, item}: any) => {
     return (
         <div className="carousel-item" style={{height: height}}>
-            <h2>{item.title}</h2>
+            <h1>{item.title}</h1>
+
             <p>{item.details}</p>
+            <NormalButton content="Get Details &rarr;" colorClass="green-bg" />
+        </div>
+    );
+};
+
+export const CarouselNav = () => {
+    return (
+        <div className="carousel-nav">
+            <SliderButton />
         </div>
     );
 };
@@ -39,6 +51,7 @@ export function CarouselContainer({children}: any): ReactElement {
                     return React.cloneElement(child, {height: "100%"});
                 })}
             </div>
+            <CarouselNav />
         </div>
     );
 }
