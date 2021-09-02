@@ -1,5 +1,10 @@
-import React, {ReactElement} from "react";
+import React, {ReactElement, useState} from "react";
 
-export default function SliderButton(): ReactElement {
-    return <></>;
+type SliderProps = {
+    buttonType: string;
+    onClick: () => void;
+};
+
+export default function SliderButton({buttonType, onClick}: SliderProps): ReactElement {
+    return <button name={buttonType} onClick={onClick} />;
 }

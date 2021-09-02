@@ -96,6 +96,9 @@ li.list-navbar a:hover {
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
     border-radius: 3px;
     font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 }
 
 .normal-button:hover {

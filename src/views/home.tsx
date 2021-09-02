@@ -1,5 +1,9 @@
 import React, {ReactElement} from "react";
 import {NavLink} from "react-router-dom";
+
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faCaretRight} from "@fortawesome/free-solid-svg-icons";
+
 import NormalButton from "../components/buttons/normalButton";
 
 export default function Home(): ReactElement {
@@ -27,7 +31,12 @@ export default function Home(): ReactElement {
                     </div>
                 </div>
                 <NavLink to="/about">
-                    <NormalButton content="Explore more &rarr;" colorClass="grey-bg" />
+                    <NormalButton content="Explore more" colorClass="grey-bg">
+                        <FontAwesomeIcon
+                            icon={faCaretRight}
+                            style={{margin: "0px 0px 0px 15px"}}
+                        />
+                    </NormalButton>
                 </NavLink>
             </div>
         </div>
