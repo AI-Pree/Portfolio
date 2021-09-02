@@ -95,6 +95,7 @@ li.list-navbar a:hover {
     border-width: 0px;
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
     border-radius: 3px;
+    font-weight: 600;
 }
 
 .normal-button:hover {
@@ -104,5 +105,37 @@ li.list-navbar a:hover {
 /* container component */
 
 .article {
+    width: 350px;
+}
+
+/* for carousel */
+.carousel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 500px;
+    width: auto;
+    overflow: hidden;
+}
+
+.inner {
+    white-space: pre-wrap;
+    transition: transform 200ms;
+}
+
+.carousel-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.carousel-nav {
+    height: 100%;
+    width: 50px;
+}
+
+.carousel-item p {
+    font-size: 12px;
     width: 350px;
 }
