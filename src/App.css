@@ -106,3 +106,21 @@ li.list-navbar a:hover {
 .article {
     width: 350px;
 }
+
+/* for carousel */
+.carousel {
+    display: flex;
+    height: 500px;
+    overflow: hidden;
+}
+
+.inner {
+    white-space: nowrap;
+    transition: transform 200ms;
+}
+
+.carousel-item {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
