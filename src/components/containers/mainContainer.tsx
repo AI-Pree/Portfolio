@@ -1,6 +1,6 @@
 import React, {ReactElement} from "react";
 import {useCallback, useState, useEffect, useMemo} from "react";
-import {BrowserRouter, HashRouter, Switch, Route} from "react-router-dom";
+import {Switch, Route, useLocation} from "react-router-dom";
 
 import Home from "../../views/home";
 import About from "../../views/about";
@@ -9,29 +9,31 @@ import Experience from "../../views/experience";
 import SideNav from "../nav/sideNav";
 import NavBar from "../nav/navBar";
 
+let colorClass = "";
+
+const changeColor = () => {
+    const location = useLocation();
+
+    if (location.pathname === "/about") colorClass = "red-bg";
+    else if (location.pathname === "/experience") colorClass = "blue-bg";
+    else if (location.pathname === "/projects") colorClass = "green-bg";
+    else colorClass = "grey-bg";
+};
+
 export default function MainContainer(): ReactElement {
-    //setting color for the whole container
-    const [colorClass, setColorClass] = useState("list-navbar-grey:hover");
-
-    //changing the class based on the new state
-    useEffect(() => {
-        console.log("The colorclass is changed to  ${colorClass}");
-    });
-
+    changeColor();
     return (
         <>
             <SideNav myColor={colorClass} />
-            <HashRouter>
-                <NavBar myColor={colorClass} />
-                <div className="container">
-                    <Switch>
-                        <Route exact path="/" component={Home} />
-                        <Route path="/about" component={About} />
-                        <Route path="/experience" component={Experience} />
-                        <Route path="/projects" component={Projects} />
-                    </Switch>
-                </div>
-            </HashRouter>
+            <NavBar myColor="list-navbar grey:hover" />
+            <div className="container">
+                <Switch>
+                    <Route exact path="/" component={Home} />
+                    <Route path="/about" component={About} />
+                    <Route path="/experience" component={Experience} />
+                    <Route path="/projects" component={Projects} />
+                </Switch>
+            </div>
         </>
     );
 }

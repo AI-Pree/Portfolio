@@ -8,7 +8,7 @@ type SideNavProps = {
 export default function SideNav({myColor}: SideNavProps): ReactElement {
     return (
         <>
-            <nav>
+            <div className={`nav ${myColor}`}>
                 <div className="nav-container">
                     <div className="toggle-icon">
                         <span className="bar"></span>
@@ -17,9 +17,9 @@ export default function SideNav({myColor}: SideNavProps): ReactElement {
                 </div>
 
                 <div className="smallNav"></div>
-            </nav>
+            </div>
 
-            <div className={`sideNav ${myColor}`}>
+            <div className="sideNav">
                 <div className="sideNav-content">
                     <ul>
                         {nav.contents.map((content) => (
