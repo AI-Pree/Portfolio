@@ -16,9 +16,9 @@ export interface ICarouselItem {
     details: string;
 }
 
-// type CarouselData = {
-//     item: ICarouselItem;
-// };
+type CarouselData = {
+    item: ICarouselItem;
+};
 
 export const CarouselItem = ({children, height, item}: any) => {
     return (
