@@ -169,8 +169,14 @@ li.list-navbar a:hover {
 .progress-bar {
     height: auto;
     width: auto;
-    background-color: rgb(238, 237, 237);
+    display: flex;
+    align-items: center;
     margin: 10px;
+}
+
+.inner-progress-bar {
+    height: 100%;
+    background-color: rgb(238, 237, 237);
 }
 
 .progress {
