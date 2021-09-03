@@ -134,8 +134,25 @@ li.list-navbar a:hover {
 }
 
 .carousel-nav {
+    display: flex;
+    flex-direction: column;
     height: 100%;
-    width: 50px;
+    width: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0px 20px 0px 20px;
+    justify-content: center;
+}
+
+.carousel-nav > button {
+    border: 0px;
+    background: white;
+    cursor: pointer;
+}
+
+.carousel-nav > p {
+    font-size: 50px;
+    color: var(--greeny) !important;
+    font-weight: 1000;
 }
 
 .carousel-item p {

@@ -410,8 +410,13 @@ article {
 
 .grid .projects {
     width: auto;
-    height: auto;
+    height: 90%;
     grid-area: proj;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
 }
 
 /* .grid #contacts{

@@ -1,6 +1,10 @@
 import React, {ReactElement, ReactNodeArray, useContext, useState} from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faCaretRight} from "@fortawesome/free-solid-svg-icons";
+import {
+    faCaretRight,
+    faChevronDown,
+    faChevronUp,
+} from "@fortawesome/free-solid-svg-icons";
 
 import NormalButton from "../buttons/normalButton";
 import SliderButton from "../buttons/sliderButton";
@@ -52,25 +56,30 @@ const CarouselNav = ({update}: CarouselNavProps) => {
                 onClick={() => {
                     update(index - 1);
                 }}
-            />
+            >
+                <FontAwesomeIcon icon={faChevronUp} />
+            </SliderButton>
             <p>{value}</p>
             <SliderButton
                 buttonType="next"
                 onClick={() => {
                     update(index + 1);
                 }}
-            />
+            >
+                <FontAwesomeIcon icon={faChevronDown} />
+            </SliderButton>
         </div>
     );
 };
 
 export function CarouselContainer({children}: any): ReactElement {
     const [activeIndex, setActiveIndex] = useState(0);
+    const childern_size = React.Children.count(children);
     const updateIndex = (newIndex: any) => {
         if (newIndex < 0) {
             newIndex = 0;
-        } else if (newIndex >= React.Children.count(children)) {
-            newIndex = React.Children.count(children) - 1;
+        } else if (newIndex >= childern_size) {
+            newIndex = childern_size - 1;
         }
 
         setActiveIndex(newIndex);
