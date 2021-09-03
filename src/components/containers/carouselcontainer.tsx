@@ -8,6 +8,7 @@ import {
 
 import NormalButton from "../buttons/normalButton";
 import SliderButton from "../buttons/sliderButton";
+import ProgressSlider from "../slider/progressSlider";
 
 export interface ICarouselItem {
     id: number;
@@ -27,7 +28,7 @@ type CarouselNavProps = {
     update: (index: number) => void;
 };
 
-const SliderIndex = React.createContext(0);
+const Slider = React.createContext([0, 0]);
 
 export const CarouselItem = ({children, height, item}: any) => {
     return (
@@ -46,29 +47,35 @@ export const CarouselItem = ({children, height, item}: any) => {
 };
 
 const CarouselNav = ({update}: CarouselNavProps) => {
-    const index = useContext(SliderIndex);
+    const [index, size] = useContext(Slider);
     const value = index + 1 < 10 ? "0" + (index + 1).toString() : (index + 1).toString();
 
     return (
-        <div className="carousel-nav">
-            <SliderButton
-                buttonType="prev"
-                onClick={() => {
-                    update(index - 1);
-                }}
-            >
-                <FontAwesomeIcon icon={faChevronUp} />
-            </SliderButton>
-            <p>{value}</p>
-            <SliderButton
-                buttonType="next"
-                onClick={() => {
-                    update(index + 1);
-                }}
-            >
-                <FontAwesomeIcon icon={faChevronDown} />
-            </SliderButton>
-        </div>
+        <>
+            <div className="carousel-nav">
+                <SliderButton
+                    buttonType="prev"
+                    onClick={() => {
+                        update(index - 1);
+                    }}
+                >
+                    <FontAwesomeIcon icon={faChevronUp} />
+                </SliderButton>
+                <p>{value}</p>
+                <SliderButton
+                    buttonType="next"
+                    onClick={() => {
+                        update(index + 1);
+                    }}
+                >
+                    <FontAwesomeIcon icon={faChevronDown} />
+                </SliderButton>
+            </div>
+            <ProgressSlider
+                itemSizePercent={((index + 1) / size) * 100}
+                barColor="rgb(102, 218, 102)"
+            />
+        </>
     );
 };
 
@@ -86,7 +93,7 @@ export function CarouselContainer({children}: any): ReactElement {
     };
 
     return (
-        <SliderIndex.Provider value={activeIndex}>
+        <Slider.Provider value={[activeIndex, childern_size]}>
             <div className="carousel">
                 <div
                     className="inner"
@@ -98,7 +105,7 @@ export function CarouselContainer({children}: any): ReactElement {
                 </div>
                 <CarouselNav update={updateIndex} />
             </div>
-        </SliderIndex.Provider>
+        </Slider.Provider>
     );
 }
 

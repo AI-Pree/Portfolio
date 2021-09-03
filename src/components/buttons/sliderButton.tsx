@@ -12,7 +12,12 @@ export default function SliderButton({
     onClick,
 }: SliderProps): ReactElement {
     return (
-        <button name={buttonType} onClick={onClick}>
+        <button
+            type="button"
+            className="slider-button"
+            name={buttonType}
+            onClick={onClick}
+        >
             {React.Children.map(children, (child, id) => {
                 return React.cloneElement(child);
             })}
