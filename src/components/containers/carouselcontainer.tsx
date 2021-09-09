@@ -9,6 +9,9 @@ import {
 import NormalButton from "../buttons/normalButton";
 import SliderButton from "../buttons/sliderButton";
 import ProgressSlider from "../slider/progressSlider";
+import {Link, Route, Switch} from "react-router-dom";
+
+import DetailProject from "../../views/project/detailProject";
 
 export interface ICarouselItem {
     id: number;
@@ -30,18 +33,21 @@ type CarouselNavProps = {
 
 const Slider = React.createContext([0, 0]);
 
-export const CarouselItem = ({children, height, item}: any) => {
+export const CarouselItem = ({children, height, item, buttonLink}: any) => {
     return (
         <div className="carousel-item" style={{height: height}}>
             <h2>{item.title}</h2>
 
             <p>{item.details}</p>
-            <NormalButton content="Get Details" colorClass="green-bg">
-                <FontAwesomeIcon
-                    icon={faCaretRight}
-                    style={{margin: "0px 0px 0px 15px"}}
-                />
-            </NormalButton>
+
+            <Link to={`${buttonLink}` + `/${item.id}`}>
+                <NormalButton content="Get Details" colorClass="green-bg">
+                    <FontAwesomeIcon
+                        icon={faCaretRight}
+                        style={{margin: "0px 0px 0px 15px"}}
+                    />
+                </NormalButton>
+            </Link>
         </div>
     );
 };
@@ -61,7 +67,10 @@ const CarouselNav = ({update}: CarouselNavProps) => {
                 >
                     <FontAwesomeIcon icon={faChevronUp} />
                 </SliderButton>
-                <p>{value}</p>
+                <p>
+                    {value}
+                    <span className="total-item">&nbsp;/&nbsp;{size}</span>
+                </p>
                 <SliderButton
                     buttonType="next"
                     onClick={() => {

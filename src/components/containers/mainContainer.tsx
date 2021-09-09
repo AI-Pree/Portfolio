@@ -5,6 +5,7 @@ import {Switch, Route, useLocation} from "react-router-dom";
 import Home from "../../views/home";
 import About from "../../views/about";
 import Projects from "../../views/project/projects";
+import DetailProject from "../../views/project/detailProject";
 import Experience from "../../views/experience";
 import SideNav from "../nav/sideNav";
 import NavBar from "../nav/navBar";
@@ -32,6 +33,7 @@ export default function MainContainer(): ReactElement {
                     <Route path="/about" component={About} />
                     <Route path="/experience" component={Experience} />
                     <Route path="/projects" component={Projects} />
+                    <Route path="/project-details/:id" component={DetailProject} />
                 </Switch>
             </div>
         </>

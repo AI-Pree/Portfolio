@@ -165,6 +165,11 @@ li.list-navbar a:hover {
     width: 350px;
 }
 
+.total-item {
+    font-size: 30px;
+    color: #5a5a5a;
+}
+
 /* for the progress bar */
 .progress-bar {
     height: auto;
